@@ -1,0 +1,133 @@
+{
+  "elapsed_s": 0.24298309999994672,
+  "attack": "shape_preserving",
+  "attack_title": "Shape-preserving magnitude scale",
+  "mechanism": "Honest direction, larger magnitude. Aggregate detector can beat Q-METER here.",
+  "n_pulses": 80000,
+  "length_km": 0.0,
+  "force_click": true,
+  "click_probability": 1.0,
+  "message": 0,
+  "pairs_consumed": 160000,
+  "n_dropped_match": 291,
+  "bob": {
+    "e_cu": 0.19032624857867575,
+    "n_cu": 11433,
+    "p_c": 0.20667678681202875,
+    "e_ct": 0.19281888514183693,
+    "threshold": 0.22,
+    "accepted": true,
+    "early_reject": false
+  },
+  "charlie": {
+    "e_cu": 0.18862690707350901,
+    "n_cu": 11536,
+    "p_c": 0.20645096538659374,
+    "e_ct": 0.19796747967479675,
+    "threshold": 0.32,
+    "accepted": true,
+    "early_reject": false
+  },
+  "forwarded": true,
+  "signature_accepted": true,
+  "bob_axis": {
+    "e": [
+      0.12922173274596183,
+      0.12741751990898748,
+      0.09951592930316334
+    ],
+    "p": [
+      0.04885585823309449,
+      0.05066007107006884,
+      0.07856166167589299
+    ],
+    "n": [
+      8853,
+      8790,
+      8883
+    ],
+    "aggregate": 0.11867601598431728
+  },
+  "charlie_axis": {
+    "e": [
+      0.13361098604232327,
+      0.12202852614896989,
+      0.09998870184159982
+    ],
+    "p": [
+      0.044203120974123225,
+      0.055785580867476606,
+      0.07782540517484668
+    ],
+    "n": [
+      8884,
+      8834,
+      8851
+    ],
+    "aggregate": 0.11855922315480447
+  },
+  "monitor_bob": {
+    "label": "CONSISTENT",
+    "mahalanobis": 1.287777725539233,
+    "threshold": 9.465642198324199,
+    "aggregate_alarm": true
+  },
+  "monitor_charlie": {
+    "label": "CONSISTENT",
+    "mahalanobis": 0.15612746102105318,
+    "threshold": 9.465642198324199,
+    "aggregate_alarm": true
+  },
+  "security": {
+    "e_b": 0.19796747967479675,
+    "e_p": 0.3564228304054144,
+    "e_bf": 0.007021523611437907,
+    "t_a": 0.22,
+    "t_v": 0.32,
+    "eps_for": 1.0,
+    "eps_rep": 1.0,
+    "eps_rob": 8.746975161526407e-05,
+    "eps_tot": 2.000087470451615,
+    "l_min": null,
+    "n_cu_for": null,
+    "phase_error_model": "yin2016",
+    "notes": [
+      "e_p intercept from Yin et al. PRA 93, 032316 (2016), the source Weng cites. Weng's printed (4\u2212\u221a2)/4 intercept is available as phase_error_model='weng_printed'.",
+      "L_min not advertised: forgery gap E_BF \u2212 T_v is non-positive.",
+      "At the 7% detector-demo fibre this is expected: Weng's \u03b5_for is derived for the low-noise operating point (e_d = 0.1%), not for the centrepiece channel. Charlie still rejects a random forgery because that mismatch is ~50%, above T_v."
+    ]
+  },
+  "contract": {
+    "label": "DEFER",
+    "reason": "Honest-shaped channel but conclusive mismatch is too high for the requested contract. Fail closed.",
+    "remaining": 49840000,
+    "l_min": null
+  },
+  "credential_ok": true,
+  "credential_reason": "ok",
+  "replay_caught": false,
+  "layers": {
+    "qds": "ACCEPT",
+    "monitor": "CONSISTENT",
+    "contract": "DEFER"
+  },
+  "notes": [
+    "e_p intercept from Yin et al. PRA 93, 032316 (2016), the source Weng cites. Weng's printed (4\u2212\u221a2)/4 intercept is available as phase_error_model='weng_printed'.",
+    "L_min not advertised: forgery gap E_BF \u2212 T_v is non-positive.",
+    "At the 7% detector-demo fibre this is expected: Weng's \u03b5_for is derived for the low-noise operating point (e_d = 0.1%), not for the centrepiece channel. Charlie still rejects a random forgery because that mismatch is ~50%, above T_v.",
+    "Three decision layers kept separate."
+  ],
+  "centrepiece": {
+    "aggregate": 0.11855922315480447,
+    "breakdown": [
+      0.13361098604232327,
+      0.12202852614896989,
+      0.09998870184159982
+    ],
+    "protocol": "ACCEPT",
+    "qmeter": "CONSISTENT",
+    "contract": "DEFER"
+  },
+  "condition": "severe_honest_degradation",
+  "seed": 141
+}

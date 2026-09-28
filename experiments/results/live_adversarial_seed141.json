@@ -1,0 +1,131 @@
+{
+  "elapsed_s": 0.01922687599994788,
+  "attack": "z_bias",
+  "attack_title": "Axis-biased channel (Z)",
+  "mechanism": "Pure-Z Pauli of the same aggregate 7%. Invisible on Z-prepared elements; aggregate 2p/3.",
+  "n_pulses": 12000,
+  "length_km": 0.0,
+  "force_click": true,
+  "click_probability": 1.0,
+  "message": 0,
+  "pairs_consumed": 24000,
+  "n_dropped_match": 189,
+  "bob": {
+    "e_cu": 0.11535968891769281,
+    "n_cu": 1543,
+    "p_c": 0.18626703920074505,
+    "e_ct": 0.1415525114155251,
+    "threshold": 0.22,
+    "accepted": true,
+    "early_reject": false
+  },
+  "charlie": {
+    "e_cu": 0.12795905310300704,
+    "n_cu": 1563,
+    "p_c": 0.18465836931673862,
+    "e_ct": 0.10841423948220065,
+    "threshold": 0.32,
+    "accepted": true,
+    "early_reject": false
+  },
+  "forwarded": true,
+  "signature_accepted": true,
+  "bob_axis": {
+    "e": [
+      0.09932279909706546,
+      0.1063504208110176,
+      0.0
+    ],
+    "p": [
+      0.0035138108569760726,
+      -0.0035138108569760726,
+      0.10283660995404154
+    ],
+    "n": [
+      1329,
+      1307,
+      1356
+    ],
+    "aggregate": 0.06788577154308617
+  },
+  "charlie_axis": {
+    "e": [
+      0.10298507462686567,
+      0.09877488514548238,
+      0.0
+    ],
+    "p": [
+      -0.0021050947406916418,
+      0.0021050947406916418,
+      0.10087997988617403
+    ],
+    "n": [
+      1340,
+      1306,
+      1283
+    ],
+    "aggregate": 0.06795622295749555
+  },
+  "monitor_bob": {
+    "label": "VIOLATION",
+    "mahalanobis": 1363899519.9176476,
+    "threshold": 8.98730175909934,
+    "aggregate_alarm": false
+  },
+  "monitor_charlie": {
+    "label": "VIOLATION",
+    "mahalanobis": 535004498.4333455,
+    "threshold": 8.98730175909934,
+    "aggregate_alarm": false
+  },
+  "security": {
+    "e_b": 0.10841423948220065,
+    "e_p": 0.26143727527929583,
+    "e_bf": 0.025461236819839868,
+    "t_a": 0.22,
+    "t_v": 0.32,
+    "eps_for": 1.0,
+    "eps_rep": 0.9849577322397006,
+    "eps_rob": 2.4902709681023233e-14,
+    "eps_tot": 1.9849577329397254,
+    "l_min": 12560756.468130732,
+    "n_cu_for": null,
+    "phase_error_model": "yin2016",
+    "notes": [
+      "e_p intercept from Yin et al. PRA 93, 032316 (2016), the source Weng cites. Weng's printed (4\u2212\u221a2)/4 intercept is available as phase_error_model='weng_printed'.",
+      "L_min is max of derived budgets (forgery closed-form; repudiation numerical)."
+    ]
+  },
+  "contract": {
+    "label": "DEFER",
+    "reason": "Link is not certifiable (Q-METER VIOLATION). This signature's validity is unchanged; the next one is not admitted.",
+    "remaining": 49976000,
+    "l_min": 12560756.468130732
+  },
+  "credential_ok": true,
+  "credential_reason": "ok",
+  "replay_caught": false,
+  "layers": {
+    "qds": "ACCEPT",
+    "monitor": "VIOLATION",
+    "contract": "DEFER"
+  },
+  "notes": [
+    "e_p intercept from Yin et al. PRA 93, 032316 (2016), the source Weng cites. Weng's printed (4\u2212\u221a2)/4 intercept is available as phase_error_model='weng_printed'.",
+    "L_min is max of derived budgets (forgery closed-form; repudiation numerical).",
+    "Detection does not override accept/reject. 'This signature was valid. The link is no longer certifiable for the next one.' "
+  ],
+  "centrepiece": {
+    "aggregate": 0.06795622295749555,
+    "breakdown": [
+      0.10298507462686567,
+      0.09877488514548238,
+      0.0
+    ],
+    "protocol": "ACCEPT",
+    "qmeter": "VIOLATION",
+    "contract": "DEFER"
+  },
+  "condition": "live_adversarial",
+  "seed": 141
+}

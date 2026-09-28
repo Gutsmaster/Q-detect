@@ -1,0 +1,132 @@
+{
+  "elapsed_s": 0.14405871700000716,
+  "attack": "nonunital",
+  "attack_title": "Non-unital relaxation",
+  "mechanism": "Amplitude damping. Pauli inversion is not valid; negatives are the honest failure.",
+  "n_pulses": 80000,
+  "length_km": 0.0,
+  "force_click": true,
+  "click_probability": 1.0,
+  "message": 0,
+  "pairs_consumed": 160000,
+  "n_dropped_match": 291,
+  "bob": {
+    "e_cu": 0.07952724358974358,
+    "n_cu": 9984,
+    "p_c": 0.17974130901152943,
+    "e_ct": 0.0736817867833295,
+    "threshold": 0.22,
+    "accepted": true,
+    "early_reject": false
+  },
+  "charlie": {
+    "e_cu": 0.07692307692307693,
+    "n_cu": 10114,
+    "p_c": 0.1815227891455168,
+    "e_ct": 0.07600459242250288,
+    "threshold": 0.32,
+    "accepted": true,
+    "early_reject": false
+  },
+  "forwarded": true,
+  "signature_accepted": true,
+  "bob_axis": {
+    "e": [
+      0.03340987370838117,
+      0.031932963424300756,
+      0.06144236229415105
+    ],
+    "p": [
+      0.029982726005035317,
+      0.03145963628911574,
+      0.0019502374192654423
+    ],
+    "n": [
+      8710,
+      8831,
+      8805
+    ],
+    "aggregate": 0.04228345858953921
+  },
+  "charlie_axis": {
+    "e": [
+      0.028594122319301033,
+      0.03306804169936106,
+      0.06295508009409656
+    ],
+    "p": [
+      0.033714499737078296,
+      0.029240580357018264,
+      -0.0006464580377172346
+    ],
+    "n": [
+      8813,
+      8921,
+      8927
+    ],
+    "aggregate": 0.041596339222084694
+  },
+  "monitor_bob": {
+    "label": "VIOLATION",
+    "mahalanobis": 199.8321198843522,
+    "threshold": 9.465642198324199,
+    "aggregate_alarm": false
+  },
+  "monitor_charlie": {
+    "label": "VIOLATION",
+    "mahalanobis": 137747918.4304271,
+    "threshold": 9.465642198324199,
+    "aggregate_alarm": false
+  },
+  "security": {
+    "e_b": 0.07600459242250288,
+    "e_p": 0.22706165346163343,
+    "e_bf": 0.0367412767700282,
+    "t_a": 0.22,
+    "t_v": 0.32,
+    "eps_for": 1.0,
+    "eps_rep": 1.10471845372338e-05,
+    "eps_rob": 1.8413953403335871e-197,
+    "eps_tot": 1.0000110478845372,
+    "l_min": 112565.72978001632,
+    "n_cu_for": null,
+    "phase_error_model": "yin2016",
+    "notes": [
+      "e_p intercept from Yin et al. PRA 93, 032316 (2016), the source Weng cites. Weng's printed (4\u2212\u221a2)/4 intercept is available as phase_error_model='weng_printed'.",
+      "L_min is max of derived budgets (forgery closed-form; repudiation numerical)."
+    ]
+  },
+  "contract": {
+    "label": "DEFER",
+    "reason": "Link is not certifiable (Q-METER VIOLATION). This signature's validity is unchanged; the next one is not admitted.",
+    "remaining": 49840000,
+    "l_min": 112565.72978001632
+  },
+  "credential_ok": true,
+  "credential_reason": "ok",
+  "replay_caught": false,
+  "layers": {
+    "qds": "ACCEPT",
+    "monitor": "VIOLATION",
+    "contract": "DEFER"
+  },
+  "notes": [
+    "e_p intercept from Yin et al. PRA 93, 032316 (2016), the source Weng cites. Weng's printed (4\u2212\u221a2)/4 intercept is available as phase_error_model='weng_printed'.",
+    "L_min is max of derived budgets (forgery closed-form; repudiation numerical).",
+    "Detection does not override accept/reject. 'This signature was valid. The link is no longer certifiable for the next one.' ",
+    "Non-unital channel: recovered (p_X, p_Y, p_Z) may be negative. That is the estimator failing honestly, not a detection."
+  ],
+  "centrepiece": {
+    "aggregate": 0.041596339222084694,
+    "breakdown": [
+      0.028594122319301033,
+      0.03306804169936106,
+      0.06295508009409656
+    ],
+    "protocol": "ACCEPT",
+    "qmeter": "VIOLATION",
+    "contract": "DEFER"
+  },
+  "condition": "nonunital",
+  "seed": 141
+}

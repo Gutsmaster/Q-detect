@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Q-METER — Weng 2021 QDS + threat monitor</title>
+<style>
+  :root {
+    --bg: #07090d;
+    --panel: #10151c;
+    --line: #1e2a38;
+    --ink: #d7e2ee;
+    --dim: #7f91a6;
+    --cyan: #5eead4;
+    --gold: #e8c36a;
+    --red: #f07178;
+    --ok: #86efac;
+    --warn: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 14px/1.45 "IBM Plex Sans", "Segoe UI", sans-serif; }
+  h1 { font-size: 20px; font-weight: 600; margin: 0; letter-spacing: .04em; }
+  h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .16em; color: var(--dim); margin: 0 0 10px; }
+  a { color: var(--cyan); }
+  header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding: 20px 28px; border-bottom: 1px solid var(--line);
+  }
+  header p { margin: 6px 0 0; color: var(--dim); max-width: 720px; }
+
+  main { display: grid; grid-template-columns: 300px 1fr; gap: 18px; padding: 20px 24px 48px; max-width: 1400px; margin: 0 auto; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+  label { display: block; color: var(--dim); font-size: 11px; text-transform: uppercase; letter-spacing: .12em; margin: 10px 0 4px; }
+  input, select { width: 100%; background: #0b1016; color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 8px; }
+  button { background: #15202b; color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; cursor: pointer; font-size: 13px; }
+  button:hover { border-color: var(--cyan); }
+  button.primary { background: #134e4a; border-color: var(--cyan); color: var(--cyan); width: 100%; margin-top: 14px; font-weight: 600; padding: 12px; font-size: 14px; }
+  button.secondary { width: 100%; margin-top: 8px; opacity: .75; }
+
+  .attacks { display: grid; grid-template-columns: 1fr; gap: 6px; }
+  .attacks button { text-align: left; }
+  .attacks button.active { border-color: var(--gold); color: var(--gold); background: #1a1608; }
+
+  /* ---- Headline: the three states, big, unmissable ---- */
+  .layers { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 18px; }
+  .layer { padding: 18px 16px; border-radius: 10px; border: 1px solid var(--line); background: #0b1016; text-align: center; }
+  .layer .k { font-size: 11px; color: var(--dim); text-transform: uppercase; letter-spacing: .14em; }
+  .layer .v { font-size: 26px; margin-top: 8px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .ok { color: var(--ok); } .bad { color: var(--red); } .warn { color: var(--warn); } .cyan { color: var(--cyan); }
+
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--dim); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+
+  .pipe { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 16px; }
+  .step { font-size: 11px; padding: 4px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--dim); }
+  .step.on { color: var(--cyan); border-color: var(--cyan); }
+  .notes { color: var(--dim); font-size: 12px; }
+  .notes li { margin-bottom: 6px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .meter { height: 14px; background: #0b1016; border-radius: 99px; overflow: hidden; border: 1px solid var(--line); }
+  .meter > div { height: 100%; background: linear-gradient(90deg, var(--cyan), var(--gold)); }
+  .meter-text { font-variant-numeric: tabular-nums; color: var(--dim); margin-top: 8px; font-size: 13px; }
+
+  .mechanism-box { font-size: 12px; color: var(--dim); margin-top: 10px; padding: 10px; border: 1px solid var(--line); border-radius: 6px; background: #0b1016; min-height: 3em; }
+
+  details.tech { margin-top: 18px; }
+  details.tech > summary {
+    cursor: pointer; color: var(--dim); font-size: 12px; text-transform: uppercase;
+    letter-spacing: .14em; padding: 10px 0; user-select: none; border-top: 1px solid var(--line);
+  }
+  details.tech > summary:hover { color: var(--cyan); }
+  details.tech[open] > summary { color: var(--cyan); margin-bottom: 4px; }
+  details.tech .panel { margin-bottom: 16px; }
+
+  details.adv { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
+  details.adv > summary { cursor: pointer; color: var(--dim); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; user-select: none; }
+  details.adv > summary:hover { color: var(--cyan); }
+
+  footer { padding: 0 28px 24px; color: var(--dim); font-size: 12px; }
+  @media (max-width: 1000px) { main { grid-template-columns: 1fr; } .layers { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Q-METER</h1>
+  </div>
+  <div style="text-align:right;color:var(--dim);font-size:12px;">
+    SIH 2026 · PS 141<br/>
+    <span id="elapsed"></span>
+  </div>
+</header>
+<main>
+  <!-- LEFT: attack choice + run. Everything else that isn't "which attack, then go" is tucked into Advanced. -->
+  <section class="panel">
+    <h2>Attack</h2>
+    <div class="attacks" id="attacks"></div>
+    <div class="mechanism-box" id="mechanism"></div>
+    <button class="primary" id="run">Run live pipeline</button>
+    <p class="notes" id="run_status" style="margin-top:10px;min-height:2.4em;"></p>
+
+    <details class="adv">
+      <summary>Advanced settings</summary>
+      <label>Pulses per recipient N</label>
+      <input id="n_pulses" type="number" value="12000" min="500" max="200000"/>
+      <label>Attack intensity β / scale</label>
+      <input id="intensity" type="range" min="0" max="1" step="0.05" value="1"/>
+      <div class="dim" id="intensity_val" style="color:var(--dim);font-size:12px;">1.00</div>
+      <label>Fibre length (km)</label>
+      <input id="length_km" type="number" value="0" min="0" max="300"/>
+      <label>Seed</label>
+      <input id="seed" type="number" value="141"/>
+      <label>Operating point</label>
+      <select id="operating_point">
+        <option value="detector_demo">Detector demo (7% fibre, T<sub>a</sub>=0.22, T<sub>v</sub>=0.32)</option>
+        <option value="weng">Weng low-noise (e<sub>d</sub>=0.1%, T<sub>a</sub>=0.015, T<sub>v</sub>=0.045)</option>
+      </select>
+      <button class="secondary" id="reset">Reset key pool / credentials</button>
+    </details>
+  </section>
+
+  <!-- RIGHT: the headline. Three states, the centrepiece comparison, the meter. Nothing else competes for attention here. -->
+  <section>
+    <div class="layers" id="layers">
+      <div class="layer"><div class="k">QDS verifier · T<sub>a</sub> / T<sub>v</sub></div><div class="v" id="l_qds">—</div></div>
+      <div class="layer"><div class="k">Q-METER monitor</div><div class="v" id="l_mon">—</div></div>
+      <div class="layer"><div class="k">Contract engine</div><div class="v" id="l_con">—</div></div>
+    </div>
+
+    <div class="panel" style="margin-bottom:16px;">
+      <h2>Centrepiece — same aggregate, different shape</h2>
+      <table>
+        <thead><tr><th>Channel</th><th>Aggregate</th><th>e<sub>X</sub> / e<sub>Y</sub> / e<sub>Z</sub></th><th>Protocol</th><th>Q-METER</th></tr></thead>
+        <tbody id="centre"></tbody>
+      </table>
+      <p class="notes">No scalar threshold can separate two channels whose aggregate statistic is identical. The basis-resolved column is the evidence.</p>
+    </div>
+
+    <div class="panel">
+      <h2>Meter — signing capacity</h2>
+      <div>Unused pairs</div>
+      <div class="meter" style="margin:8px 0;"><div id="meterbar" style="width:80%"></div></div>
+      <div id="metertext" class="meter-text"></div>
+      <p class="notes" id="contract_reason"></p>
+    </div>
+
+    <!-- Everything below is real, but it's supporting evidence, not the headline. Collapsed by default. -->
+    <details class="tech">
+      <summary>Show full technical detail — pipeline, per-party stats, finite-size security, seeded experiments, assumptions</summary>
+
+      <div class="panel">
+        <h2>Pipeline</h2>
+        <div class="pipe">
+          <span class="step on">keygen</span>
+          <span class="step on">Bell pairs</span>
+          <span class="step on">Bell measurement</span>
+          <span class="step on">auth. 2 bits</span>
+          <span class="step on">Pauli correction</span>
+          <span class="step on">X/Y/Z measure</span>
+          <span class="step on">post-matching</span>
+          <span class="step on">sign</span>
+          <span class="step on">Bob T<sub>a</sub></span>
+          <span class="step on">forward classical</span>
+          <span class="step on">Charlie T<sub>v</sub></span>
+          <span class="step on">Q-METER</span>
+          <span class="step on">ADMIT / DEFER</span>
+        </div>
+        <div class="row">
+          <div>
+            <h2>Bob (authenticator)</h2>
+            <table id="bob_tbl"></table>
+          </div>
+          <div>
+            <h2>Charlie (verifier)</h2>
+            <table id="cha_tbl"></table>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Finite-size security (Weng symbols)</h2>
+        <table id="sec_tbl"></table>
+        <ul class="notes" id="notes"></ul>
+      </div>
+
+      <div class="panel">
+        <h2>Seeded experiments (seed 141)</h2>
+        <div id="exps"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Assumptions (stated first)</h2>
+        <ul class="notes" id="assumptions"></ul>
+      </div>
+    </details>
+  </section>
+</main>
+<script>
+const ATTACK_ORDER = ["none","honest_drift","z_bias","x_bias","correction_bits","forgery","replay","repudiation","unauthorized","nonunital","shape_preserving"];
+let currentAttack = "none";
+let attacksMeta = {};
+
+function pct(x){ if(x==null || Number.isNaN(x)) return "—"; return (100*x).toFixed(2)+"%"; }
+function sci(x){ if(x==null || !isFinite(x)) return "—"; return Number(x).toExponential(2); }
+function num(x, digits){
+  if(x==null || !isFinite(Number(x))) return "—";
+  return Number(x).toFixed(digits);
+}
+function cls(label){
+  if(!label) return "";
+  if(/ACCEPT|CONSISTENT|ADMIT/.test(label)) return "ok";
+  if(/DEFER|VIOLATION/.test(label)) return "warn";
+  return "bad";
+}
+
+async function loadMeta(){
+  const m = await (await fetch("/api/meta")).json();
+  attacksMeta = m.attacks;
+  const box = document.getElementById("attacks");
+  box.innerHTML = "";
+  ATTACK_ORDER.forEach(k=>{
+    if(!attacksMeta[k]) return;
+    const b = document.createElement("button");
+    b.textContent = attacksMeta[k].title;
+    b.dataset.k = k;
+    if(k===currentAttack) b.classList.add("active");
+    b.onclick = ()=>{ currentAttack=k; [...box.children].forEach(x=>x.classList.toggle("active", x.dataset.k===k));
+      document.getElementById("mechanism").textContent = attacksMeta[k].mechanism; };
+    box.appendChild(b);
+  });
+  document.getElementById("mechanism").textContent = attacksMeta[currentAttack].mechanism;
+  document.getElementById("assumptions").innerHTML = m.assumptions.map(a=>`<li>${a}</li>`).join("");
+  updateMeter(m.pool);
+}
+
+function updateMeter(pool){
+  const frac = pool.generated ? 100*pool.remaining/pool.generated : 0;
+  document.getElementById("meterbar").style.width = frac+"%";
+  document.getElementById("metertext").textContent =
+    `${pool.remaining.toLocaleString()} remaining · ${pool.consumed.toLocaleString()} consumed`;
+}
+
+function kvTable(rows){
+  return rows.map(([k,v])=>`<tr><th>${k}</th><td>${v}</td></tr>`).join("");
+}
+
+function render(d){
+  try {
+  if(d && d.error){
+    document.getElementById("run_status").innerHTML = `<span class="bad">${d.error}</span>`;
+    return;
+  }
+  const clickP = d.click_probability;
+  const km = d.length_km;
+  document.getElementById("elapsed").textContent = num(d.elapsed_s, 3)+" s";
+  document.getElementById("run_status").innerHTML =
+    `<span class="ok">Finished</span> · ${d.n_pulses} pulses · ${km} km · pair click ${pct(clickP)} · ${num(d.elapsed_s, 3)} s`;
+  document.getElementById("l_qds").textContent = d.layers.qds;
+  document.getElementById("l_qds").className = "v "+cls(d.layers.qds);
+  document.getElementById("l_mon").textContent = d.layers.monitor;
+  document.getElementById("l_mon").className = "v "+cls(d.layers.monitor);
+  document.getElementById("l_con").textContent = d.layers.contract;
+  document.getElementById("l_con").className = "v "+cls(d.layers.contract);
+
+  const party = (p, ax, mon)=>([
+    ["E<sup>cu</sup> vs T", `${pct(p.e_cu)}  ≤  ${pct(p.threshold)}`],
+    ["conclusive n", p.n_cu],
+    ["P<sup>c</sup> (ideal 1/6)", pct(p.p_c)],
+    ["e<sub>X</sub> / e<sub>Y</sub> / e<sub>Z</sub>", ax.e.map(pct).join(" · ")],
+    ["p̂<sub>X</sub> / p̂<sub>Y</sub> / p̂<sub>Z</sub>", ax.p.map(x=>num(x,3)).join(" · ")],
+    ["aggregate QBER", pct(ax.aggregate)],
+    ["Mahalanobis D²", num(mon.mahalanobis,2)+"  (99% thr "+num(mon.threshold,2)+")"],
+    ["monitor", mon.label],
+  ]);
+  document.getElementById("bob_tbl").innerHTML = kvTable(party(d.bob, d.bob_axis, d.monitor_bob));
+  document.getElementById("cha_tbl").innerHTML = kvTable(party(d.charlie, d.charlie_axis, d.monitor_charlie));
+
+  const s = d.security;
+  document.getElementById("sec_tbl").innerHTML = kvTable([
+    ["e<sub>b</sub> (conclusive mismatch)", pct(s.e_b)],
+    ["e<sub>p</sub> (Yin 2016a)", pct(s.e_p)],
+    ["E<sub>BF</sub><sup>*</sup>", pct(s.e_bf)],
+    ["T<sub>a</sub> / T<sub>v</sub>", pct(s.t_a)+" / "+pct(s.t_v)],
+    ["ε<sub>for</sub>", sci(s.eps_for)],
+    ["ε<sub>rep</sub>", sci(s.eps_rep)],
+    ["ε<sub>rob</sub>", sci(s.eps_rob)],
+    ["ε<sub>tot</sub> = 11ε₁+ε₂+ε<sub>rob</sub>+ε<sub>for</sub>+ε<sub>rep</sub>", sci(s.eps_tot)],
+    ["L<sub>min</sub> (derived)", s.l_min==null || !isFinite(Number(s.l_min)) ? "not advertised" : Number(s.l_min).toFixed(0)],
+    ["phase-error model", s.phase_error_model],
+    ["credential", d.credential_ok ? "ok" : d.credential_reason],
+    ["replay", d.replay_caught ? "caught" : "—"],
+  ]);
+  document.getElementById("notes").innerHTML = (d.notes||[]).concat(s.notes||[]).map(n=>`<li>${n}</li>`).join("");
+  document.getElementById("contract_reason").textContent = d.contract.reason;
+  if(d.contract.remaining!=null){
+    updateMeter({generated: 2000000, consumed: 2000000-d.contract.remaining, remaining: d.contract.remaining});
+  }
+
+  const row = `<tr>
+    <td>${d.attack_title}</td>
+    <td>${pct(d.centrepiece.aggregate)}</td>
+    <td>${d.centrepiece.breakdown.map(pct).join(" / ")}</td>
+    <td class="${cls(d.centrepiece.protocol)}">${d.centrepiece.protocol}</td>
+    <td class="${cls(d.qmeter ? d.centrepiece.qmeter : d.centrepiece.qmeter)}">${d.centrepiece.qmeter}</td>
+  </tr>`;
+  // append unique-ish
+  const tb = document.getElementById("centre");
+  tb.insertAdjacentHTML("afterbegin", row);
+  } catch (err) {
+    document.getElementById("run_status").innerHTML = `<span class="bad">UI render failed: ${err.message}</span>`;
+    console.error(err, d);
+  }
+}
+
+async function run(){
+  const btn = document.getElementById("run");
+  const status = document.getElementById("run_status");
+  const body = {
+    attack: currentAttack,
+    n_pulses: +document.getElementById("n_pulses").value,
+    intensity: +document.getElementById("intensity").value,
+    length_km: +document.getElementById("length_km").value,
+    seed: +document.getElementById("seed").value,
+    operating_point: document.getElementById("operating_point").value,
+  };
+  btn.disabled = true;
+  btn.textContent = "Running…";
+  status.innerHTML = `<span class="warn">Running ${body.attack} at ${body.length_km} km (${body.n_pulses} pulses)…</span>`;
+  try {
+    const res = await fetch("/api/run", {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(body)});
+    const data = await res.json();
+    if(!res.ok) throw new Error(data.error || res.statusText);
+    render(data);
+  } catch (err) {
+    status.innerHTML = `<span class="bad">Run failed: ${err.message}</span>`;
+    console.error(err);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Run live pipeline";
+  }
+}
+
+document.getElementById("run").onclick = run;
+document.getElementById("intensity").oninput = e=> document.getElementById("intensity_val").textContent = Number(e.target.value).toFixed(2);
+document.getElementById("reset").onclick = async ()=>{
+  await fetch("/api/reset", {method:"POST"});
+  location.reload();
+};
+
+async function loadExps(){
+  const xs = await (await fetch("/api/experiments")).json();
+  const el = document.getElementById("exps");
+  if(!xs.length){ el.innerHTML = "<p class='notes'>Run <code>python experiments/generate_experiment.py --seed 141</code></p>"; return; }
+  el.innerHTML = xs.map(x=>`<button data-c="${x.condition}" style="width:100%;margin:3px 0;text-align:left">
+    ${x.condition}<br/><span style="color:var(--dim);font-size:11px">${pct(x.aggregate)} · ${x.qmeter} · ${x.protocol}</span>
+  </button>`).join("");
+  el.querySelectorAll("button").forEach(b=> b.onclick = async ()=>{
+    const d = await (await fetch("/api/experiment/"+b.dataset.c)).json();
+    render(d);
+  });
+}
+
+loadMeta().then(loadExps);
+</script>
+</body>
+</html>

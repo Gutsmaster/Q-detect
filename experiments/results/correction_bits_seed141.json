@@ -1,0 +1,133 @@
+{
+  "elapsed_s": 0.058689678000064305,
+  "attack": "correction_bits",
+  "attack_title": "Correction-bit tampering",
+  "mechanism": "Flip the two classical teleportation bits. Recipient applies the wrong Pauli. Quantum measurements look ordinary if the MAC is off.",
+  "n_pulses": 40000,
+  "length_km": 0.0,
+  "force_click": true,
+  "click_probability": 1.0,
+  "message": 0,
+  "pairs_consumed": 80000,
+  "n_dropped_match": 231,
+  "bob": {
+    "e_cu": 0.12575987841945288,
+    "n_cu": 5264,
+    "p_c": 0.19148080162940984,
+    "e_ct": 0.12420246703530413,
+    "threshold": 0.22,
+    "accepted": true,
+    "early_reject": false
+  },
+  "charlie": {
+    "e_cu": 0.568040068040068,
+    "n_cu": 10582,
+    "p_c": 0.382207246850562,
+    "e_ct": 0.5506712862711131,
+    "threshold": 0.32,
+    "accepted": false,
+    "early_reject": true
+  },
+  "forwarded": true,
+  "signature_accepted": false,
+  "bob_axis": {
+    "e": [
+      0.0838785046728972,
+      0.07419135942094549,
+      0.060503059143439834
+    ],
+    "p": [
+      0.025407956945744062,
+      0.03509510219769578,
+      0.04878340247520142
+    ],
+    "n": [
+      4280,
+      4421,
+      4413
+    ],
+    "aggregate": 0.07274668293426872
+  },
+  "charlie_axis": {
+    "e": [
+      0.6410020684900023,
+      0.6427428571428572,
+      0.6629995509654243
+    ],
+    "p": [
+      0.3323701698091395,
+      0.33062938115628465,
+      0.3103726873337176
+    ],
+    "n": [
+      4351,
+      4375,
+      4454
+    ],
+    "aggregate": 0.6490136570561457
+  },
+  "monitor_bob": {
+    "label": "CONSISTENT",
+    "mahalanobis": 0.7258052843274545,
+    "threshold": 9.482986095398662,
+    "aggregate_alarm": false
+  },
+  "monitor_charlie": {
+    "label": "VIOLATION",
+    "mahalanobis": 13.350026422227552,
+    "threshold": 9.482986095398662,
+    "aggregate_alarm": true
+  },
+  "security": {
+    "e_b": 0.5506712862711131,
+    "e_p": 0.7305217104972601,
+    "e_bf": 0.023243745671851224,
+    "t_a": 0.22,
+    "t_v": 0.32,
+    "eps_for": 1.0,
+    "eps_rep": 1.0,
+    "eps_rob": 1.0,
+    "eps_tot": 3.0000000007,
+    "l_min": null,
+    "n_cu_for": null,
+    "phase_error_model": "yin2016",
+    "notes": [
+      "e_p intercept from Yin et al. PRA 93, 032316 (2016), the source Weng cites. Weng's printed (4\u2212\u221a2)/4 intercept is available as phase_error_model='weng_printed'.",
+      "L_min not advertised: forgery gap E_BF \u2212 T_v is non-positive.",
+      "At the 7% detector-demo fibre this is expected: Weng's \u03b5_for is derived for the low-noise operating point (e_d = 0.1%), not for the centrepiece channel. Charlie still rejects a random forgery because that mismatch is ~50%, above T_v."
+    ]
+  },
+  "contract": {
+    "label": "DEFER",
+    "reason": "Link is not certifiable (Q-METER VIOLATION). This signature's validity is unchanged; the next one is not admitted.",
+    "remaining": 49920000,
+    "l_min": null
+  },
+  "credential_ok": true,
+  "credential_reason": "ok",
+  "replay_caught": false,
+  "layers": {
+    "qds": "REJECT",
+    "monitor": "VIOLATION",
+    "contract": "DEFER"
+  },
+  "notes": [
+    "e_p intercept from Yin et al. PRA 93, 032316 (2016), the source Weng cites. Weng's printed (4\u2212\u221a2)/4 intercept is available as phase_error_model='weng_printed'.",
+    "L_min not advertised: forgery gap E_BF \u2212 T_v is non-positive.",
+    "At the 7% detector-demo fibre this is expected: Weng's \u03b5_for is derived for the low-noise operating point (e_d = 0.1%), not for the centrepiece channel. Charlie still rejects a random forgery because that mismatch is ~50%, above T_v.",
+    "Three decision layers kept separate."
+  ],
+  "centrepiece": {
+    "aggregate": 0.6490136570561457,
+    "breakdown": [
+      0.6410020684900023,
+      0.6427428571428572,
+      0.6629995509654243
+    ],
+    "protocol": "REJECT",
+    "qmeter": "VIOLATION",
+    "contract": "DEFER"
+  },
+  "condition": "correction_bits",
+  "seed": 141
+}

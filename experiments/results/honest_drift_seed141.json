@@ -1,0 +1,131 @@
+{
+  "elapsed_s": 0.7213179160000891,
+  "attack": "honest_drift",
+  "attack_title": "Honest drift",
+  "mechanism": "Same aggregate error, shape still in the calibrated family",
+  "n_pulses": 200000,
+  "length_km": 0.0,
+  "force_click": true,
+  "click_probability": 1.0,
+  "message": 0,
+  "pairs_consumed": 400000,
+  "n_dropped_match": 906,
+  "bob": {
+    "e_cu": 0.12349533554017454,
+    "n_cu": 26584,
+    "p_c": 0.19016143128371524,
+    "e_ct": 0.11972330613692798,
+    "threshold": 0.22,
+    "accepted": true,
+    "early_reject": false
+  },
+  "charlie": {
+    "e_cu": 0.12234953747763523,
+    "n_cu": 26269,
+    "p_c": 0.18928244949621786,
+    "e_ct": 0.1183426769446391,
+    "threshold": 0.32,
+    "accepted": true,
+    "early_reject": false
+  },
+  "forwarded": true,
+  "signature_accepted": true,
+  "bob_axis": {
+    "e": [
+      0.0750136636910184,
+      0.07272071096675238,
+      0.06199521725398186
+    ],
+    "p": [
+      0.029851132264857923,
+      0.032144084989123946,
+      0.042869578701894465
+    ],
+    "n": [
+      21956,
+      22167,
+      22163
+    ],
+    "aggregate": 0.06989409528407205
+  },
+  "charlie_axis": {
+    "e": [
+      0.07463639265034423,
+      0.07168426704850546,
+      0.05990242139501265
+    ],
+    "p": [
+      0.028475147896586943,
+      0.031427273498425716,
+      0.043209119151918524
+    ],
+    "n": [
+      21933,
+      22348,
+      22136
+    ],
+    "aggregate": 0.06873240284866826
+  },
+  "monitor_bob": {
+    "label": "CONSISTENT",
+    "mahalanobis": 1.6736002979275777,
+    "threshold": 8.978997309561812,
+    "aggregate_alarm": false
+  },
+  "monitor_charlie": {
+    "label": "CONSISTENT",
+    "mahalanobis": 0.7831875072997101,
+    "threshold": 8.978997309561812,
+    "aggregate_alarm": false
+  },
+  "security": {
+    "e_b": 0.1183426769446391,
+    "e_p": 0.27196797346371104,
+    "e_bf": 0.022586325286606153,
+    "t_a": 0.22,
+    "t_v": 0.32,
+    "eps_for": 1.0,
+    "eps_rep": 2.2705033752978076e-08,
+    "eps_rob": 9.778554840878629e-174,
+    "eps_tot": 1.000000023405034,
+    "l_min": 182323.68801365962,
+    "n_cu_for": null,
+    "phase_error_model": "yin2016",
+    "notes": [
+      "e_p intercept from Yin et al. PRA 93, 032316 (2016), the source Weng cites. Weng's printed (4\u2212\u221a2)/4 intercept is available as phase_error_model='weng_printed'.",
+      "L_min is max of derived budgets (forgery closed-form; repudiation numerical)."
+    ]
+  },
+  "contract": {
+    "label": "ADMIT",
+    "reason": "Monitor CONSISTENT and remaining material covers another signature of this size. Weng \u03b5_for is not advertised at this noise (E_BF does not sit above T_v); switch operating_point to 'weng' for that budget.",
+    "remaining": 49600000,
+    "l_min": 182323.68801365962
+  },
+  "credential_ok": true,
+  "credential_reason": "ok",
+  "replay_caught": false,
+  "layers": {
+    "qds": "ACCEPT",
+    "monitor": "CONSISTENT",
+    "contract": "ADMIT"
+  },
+  "notes": [
+    "e_p intercept from Yin et al. PRA 93, 032316 (2016), the source Weng cites. Weng's printed (4\u2212\u221a2)/4 intercept is available as phase_error_model='weng_printed'.",
+    "L_min is max of derived budgets (forgery closed-form; repudiation numerical).",
+    "Three decision layers kept separate."
+  ],
+  "centrepiece": {
+    "aggregate": 0.06873240284866826,
+    "breakdown": [
+      0.07463639265034423,
+      0.07168426704850546,
+      0.05990242139501265
+    ],
+    "protocol": "ACCEPT",
+    "qmeter": "CONSISTENT",
+    "contract": "ADMIT"
+  },
+  "condition": "honest_drift",
+  "seed": 141
+}

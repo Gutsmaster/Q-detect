@@ -1,0 +1,2415 @@
+{
+  "n_raw": 200000,
+  "n_per_condition": 150,
+  "aggregate_threshold_used": 0.07229404080897257,
+  "false_alarm_rate": {
+    "aggregate": 0.006666666666666667,
+    "qmeter": 0.0
+  },
+  "detection_rate": {
+    "aggregate": 0.02,
+    "qmeter": 1.0
+  },
+  "rows": [
+    {
+      "condition": "honest",
+      "aggregate": 0.07019966971926138,
+      "mahalanobis": 1.0764998001121067,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07120038576293662,
+      "mahalanobis": 0.7119979615657036,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07118694806166742,
+      "mahalanobis": 0.20229711586887825,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06796860905646762,
+      "mahalanobis": 0.48285814539842475,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07149953337146642,
+      "mahalanobis": 0.23152314297399573,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0698471389277179,
+      "mahalanobis": 0.34663818373556604,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06885811056005806,
+      "mahalanobis": 0.5852450514191373,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07006911376155006,
+      "mahalanobis": 0.507238546492354,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07151377878444697,
+      "mahalanobis": 0.09389973733291196,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06954813948607239,
+      "mahalanobis": 0.8603519878198639,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06871265616512764,
+      "mahalanobis": 0.10843565935481053,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06936980214369352,
+      "mahalanobis": 0.28394158805980835,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0686927622971774,
+      "mahalanobis": 2.511394432305966,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0710117171595313,
+      "mahalanobis": 2.5387672179364174,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07131221719457013,
+      "mahalanobis": 0.9637643843339821,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06868479768437556,
+      "mahalanobis": 0.7740028779903917,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06978525304099714,
+      "mahalanobis": 0.5263969616995123,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0705619460399826,
+      "mahalanobis": 0.8680317872502962,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06942441720740207,
+      "mahalanobis": 0.6236117055368702,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06811326700580742,
+      "mahalanobis": 0.1162653092216529,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07104702457761906,
+      "mahalanobis": 0.2539300201612843,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06815479326279031,
+      "mahalanobis": 0.5153195985475779,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06854376545816493,
+      "mahalanobis": 0.4743216841740016,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06896499924891092,
+      "mahalanobis": 0.0988448123183195,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06978243593780457,
+      "mahalanobis": 0.4191621990034946,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07048896255556393,
+      "mahalanobis": 0.6473061299257203,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07007914607150438,
+      "mahalanobis": 0.02127159745110695,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07000406387814385,
+      "mahalanobis": 0.06913066146225225,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07082182893525853,
+      "mahalanobis": 3.3338186988878453,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06978992040837902,
+      "mahalanobis": 1.870288400067399,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06948608620975397,
+      "mahalanobis": 2.5993076224398903,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06850038474885707,
+      "mahalanobis": 0.27643528895758,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07097239544983244,
+      "mahalanobis": 0.11661538927350933,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06952700567352406,
+      "mahalanobis": 0.6597865812593039,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06815860618804445,
+      "mahalanobis": 0.6183431584918048,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0704804664547331,
+      "mahalanobis": 0.05298599625626674,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07195981112435319,
+      "mahalanobis": 0.8837718158534662,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07031367477669845,
+      "mahalanobis": 0.013546612922534363,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06952291748496843,
+      "mahalanobis": 0.03136142344221099,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06940280609185753,
+      "mahalanobis": 0.02548095065482877,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06970537679804589,
+      "mahalanobis": 0.47963626520712327,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06883258246908354,
+      "mahalanobis": 0.21650926213281033,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0692421141343607,
+      "mahalanobis": 1.1046858348213922,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0694141524294196,
+      "mahalanobis": 0.12542620326548742,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07104244778726415,
+      "mahalanobis": 0.923957612240935,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0699629246033533,
+      "mahalanobis": 0.09101995982925827,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07037919695918429,
+      "mahalanobis": 0.2625210896964061,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07011630881268714,
+      "mahalanobis": 0.12377839340362452,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06962711048243898,
+      "mahalanobis": 0.06071150125689875,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0689349423663606,
+      "mahalanobis": 0.519794570204344,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07012654413980114,
+      "mahalanobis": 1.1488928209458364,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07042806847886855,
+      "mahalanobis": 0.21250739555273868,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06944863820279003,
+      "mahalanobis": 0.5110775255134337,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07109205122010147,
+      "mahalanobis": 1.043743615001726,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07140275309497274,
+      "mahalanobis": 0.9025227105333677,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07096356128876699,
+      "mahalanobis": 0.43437085584623636,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06945321189166441,
+      "mahalanobis": 1.3268168847113626,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06885374421444616,
+      "mahalanobis": 1.3545057804523184,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06985959298413505,
+      "mahalanobis": 0.17756061010200022,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0702787356754559,
+      "mahalanobis": 0.5183166905820882,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07082324455205811,
+      "mahalanobis": 0.10388474110873144,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06844244338011997,
+      "mahalanobis": 1.4619567614690712,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06890063614371472,
+      "mahalanobis": 1.024856291668347,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07043876451574285,
+      "mahalanobis": 0.4608258517040891,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06921787542279026,
+      "mahalanobis": 0.9282015246560839,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06950429410878409,
+      "mahalanobis": 0.09729396854159225,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0696984303919501,
+      "mahalanobis": 1.0941943921031154,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06922762442651,
+      "mahalanobis": 0.8775420376086774,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07011570447149572,
+      "mahalanobis": 0.046755818499044983,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07094960307914361,
+      "mahalanobis": 0.6962069471500366,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06992670911930794,
+      "mahalanobis": 0.2571234102650192,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07132216855504898,
+      "mahalanobis": 0.06198598597080296,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06962034802679896,
+      "mahalanobis": 0.5957400126538024,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07101594970516302,
+      "mahalanobis": 0.22535705893363306,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07000678068258871,
+      "mahalanobis": 0.5951577973727927,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0692453340546389,
+      "mahalanobis": 0.2513732700073384,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07050887182800222,
+      "mahalanobis": 1.7313322544671512,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06943566591422122,
+      "mahalanobis": 1.0732683713437823,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07016936394429808,
+      "mahalanobis": 0.24360569462660098,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07132512671976829,
+      "mahalanobis": 0.9462947179026663,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07030085938323075,
+      "mahalanobis": 0.43083894907454146,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06979363792015861,
+      "mahalanobis": 0.11892118491507643,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06925024108003858,
+      "mahalanobis": 0.3584091279651264,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07070570975178897,
+      "mahalanobis": 0.254722757733991,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07116992063731555,
+      "mahalanobis": 0.08609212315617584,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06950877666351876,
+      "mahalanobis": 0.08587642888267402,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07007890679324001,
+      "mahalanobis": 0.03427060047842395,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0704607859318499,
+      "mahalanobis": 2.287326094977161,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07012983109935686,
+      "mahalanobis": 0.4966025844764117,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07060289437338618,
+      "mahalanobis": 0.049165893848697406,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07061551433389544,
+      "mahalanobis": 4.2701285018684185,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0712617702448211,
+      "mahalanobis": 0.28213319271255966,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07136056580677336,
+      "mahalanobis": 0.36908317205182795,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06880520688052069,
+      "mahalanobis": 0.32723560961546927,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07214395856101322,
+      "mahalanobis": 0.42098501709511194,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0678157119673018,
+      "mahalanobis": 0.523913087627306,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07022615713554371,
+      "mahalanobis": 0.528165963828631,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0716072685871796,
+      "mahalanobis": 1.772211419070867,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07176127655738197,
+      "mahalanobis": 0.02160234995246459,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06956613215911994,
+      "mahalanobis": 0.5425883700207699,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06846667270695539,
+      "mahalanobis": 1.3400016755790085,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06967996268488286,
+      "mahalanobis": 3.158140628914471,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07017806150672029,
+      "mahalanobis": 0.20160329380993938,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07093890616978227,
+      "mahalanobis": 0.7204899148262465,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06924969435346325,
+      "mahalanobis": 0.681359439144039,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06899144373768816,
+      "mahalanobis": 0.3914796113694414,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06876068760687606,
+      "mahalanobis": 0.36606096535516985,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07075699132111861,
+      "mahalanobis": 0.7247587404741384,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06966190833959429,
+      "mahalanobis": 0.6371804648413961,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06953193284909129,
+      "mahalanobis": 0.19812745884362815,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07055159339171256,
+      "mahalanobis": 0.1862414470644,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06832213751981282,
+      "mahalanobis": 0.03346277485003503,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06965804233761534,
+      "mahalanobis": 0.583704514969211,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07031626506024097,
+      "mahalanobis": 0.22842769606436153,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06921572433150688,
+      "mahalanobis": 0.06442688075590476,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06879176912516784,
+      "mahalanobis": 1.175115429106063,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06998811976480142,
+      "mahalanobis": 0.6485919148231385,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07121326299924642,
+      "mahalanobis": 0.18354677482228307,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06822848749194359,
+      "mahalanobis": 0.1525428209217836,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07051049416318877,
+      "mahalanobis": 1.244563234279005,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0713535256506469,
+      "mahalanobis": 0.9376100948116527,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07062731184419113,
+      "mahalanobis": 4.231546598645292,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0688228034795172,
+      "mahalanobis": 1.1034078096066642,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07025569558894813,
+      "mahalanobis": 0.7414901147209103,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07108940646130729,
+      "mahalanobis": 0.5123770620356375,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07068519521145401,
+      "mahalanobis": 0.3670604951026709,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06976709353703288,
+      "mahalanobis": 0.7192612130829736,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0704389036464622,
+      "mahalanobis": 1.901256048598679,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07023966053071957,
+      "mahalanobis": 0.06853546262695093,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06963922572870378,
+      "mahalanobis": 0.3217172189819178,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07165033911077619,
+      "mahalanobis": 1.3896007237924939,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06961996648095303,
+      "mahalanobis": 0.0630090628469458,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07116942798403676,
+      "mahalanobis": 0.02952181342309101,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06984711510889087,
+      "mahalanobis": 0.8648085272222471,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0725664779808111,
+      "mahalanobis": 0.5554079407385576,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": true,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06996499486993783,
+      "mahalanobis": 0.20851327458449212,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06975373923553407,
+      "mahalanobis": 0.06606705520857974,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06901632935374252,
+      "mahalanobis": 0.7840585740238404,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07035952863469189,
+      "mahalanobis": 0.45851164526753274,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.070125890094042,
+      "mahalanobis": 0.1624538491774049,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06721946984777956,
+      "mahalanobis": 1.2426119949619017,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06883779755183161,
+      "mahalanobis": 0.32496863767877415,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06939477615318455,
+      "mahalanobis": 0.4701969303285014,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06922273608831866,
+      "mahalanobis": 0.17055393656221116,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06985404079679368,
+      "mahalanobis": 0.4542199191559496,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07004269982770245,
+      "mahalanobis": 0.3104334994882679,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.06870251974426476,
+      "mahalanobis": 1.848299836522117,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07116009523952141,
+      "mahalanobis": 1.5877709388973755,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.07160094128932656,
+      "mahalanobis": 0.20420145466008802,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "honest",
+      "aggregate": 0.0705371676614216,
+      "mahalanobis": 0.8193643775775228,
+      "monitor_label": "CONSISTENT",
+      "agg_alarm_calibrated": false,
+      "mon_violation": false
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06904840599741595,
+      "mahalanobis": 675624530.5261946,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07305963621006908,
+      "mahalanobis": 65172631.19960994,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": true,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07141568709978054,
+      "mahalanobis": 183042671.81994832,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07040285997536576,
+      "mahalanobis": 88489765.09272301,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06993343250837729,
+      "mahalanobis": 18235502.76729011,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0704890741935,
+      "mahalanobis": 2368316314.640636,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06959141347624022,
+      "mahalanobis": 1237347711.4986572,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06883181292174514,
+      "mahalanobis": 332441859.84629613,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07049207472190026,
+      "mahalanobis": 1040724675.471451,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07069162017875352,
+      "mahalanobis": 9945997.10536846,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07012983087223977,
+      "mahalanobis": 37136061.616357476,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0704558108738507,
+      "mahalanobis": 206755728.33160657,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06972845621771831,
+      "mahalanobis": 1976745.4276440956,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06897955491224896,
+      "mahalanobis": 3443365.0251147016,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07034576475917258,
+      "mahalanobis": 1225099302.333019,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06919774011299434,
+      "mahalanobis": 72414779.4705346,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07076053288425105,
+      "mahalanobis": 78415.26667465437,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06956495586399795,
+      "mahalanobis": 252544045.9512634,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06878925514532835,
+      "mahalanobis": 387984533.27115613,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07082271841750337,
+      "mahalanobis": 76406500.82565895,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07038660103253692,
+      "mahalanobis": 26288030.132046346,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06987878787878787,
+      "mahalanobis": 7826458.157557752,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0711546590977716,
+      "mahalanobis": 284363136.46894866,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07160026440718707,
+      "mahalanobis": 36489979.545016564,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07182328783669525,
+      "mahalanobis": 35343788.7910614,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07055762306738071,
+      "mahalanobis": 1253242.9881136762,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07032891183002221,
+      "mahalanobis": 88298.7497615132,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0691459765102185,
+      "mahalanobis": 47804404.35154473,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0704705512941282,
+      "mahalanobis": 36435766.977007166,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06932505213255923,
+      "mahalanobis": 104377798.24732323,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06935291722588331,
+      "mahalanobis": 742149.6691755207,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0700584954427969,
+      "mahalanobis": 25005420.118851397,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07061151672338575,
+      "mahalanobis": 690059.4337395058,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07016457798580704,
+      "mahalanobis": 27995713.149324443,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07241741741741742,
+      "mahalanobis": 234813993.14395982,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": true,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06992240848854137,
+      "mahalanobis": 337554166.7853623,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07047126246596772,
+      "mahalanobis": 16878102.04393489,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.070080215908239,
+      "mahalanobis": 83917175.52917178,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07179078200941963,
+      "mahalanobis": 74280183.16802023,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07049510304632578,
+      "mahalanobis": 132843680.04779744,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0690510022069716,
+      "mahalanobis": 113630681.5379957,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.069703721546429,
+      "mahalanobis": 15481.634900207926,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06959971150378651,
+      "mahalanobis": 19199388.870609045,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0689925993052409,
+      "mahalanobis": 25189137.584628742,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0700378057709837,
+      "mahalanobis": 243694352.1243183,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07074924261835501,
+      "mahalanobis": 40632906.23593383,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07159710846270609,
+      "mahalanobis": 2933308.9875712493,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06987878787878787,
+      "mahalanobis": 135053740.93877387,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06956824934812929,
+      "mahalanobis": 7249100.62141374,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07015464922675387,
+      "mahalanobis": 365768.2797102108,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07177055172101313,
+      "mahalanobis": 48415118.111361146,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07119170674872285,
+      "mahalanobis": 2608173.5441744216,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06920280056492083,
+      "mahalanobis": 191506586.21344638,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06929816665166381,
+      "mahalanobis": 129405651.54271455,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07053601289106443,
+      "mahalanobis": 1545306.5926162992,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06871316527450774,
+      "mahalanobis": 31856427.71186208,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06957975095237379,
+      "mahalanobis": 47137237.4129849,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07078648307377788,
+      "mahalanobis": 48182558.00370671,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06960374998115966,
+      "mahalanobis": 7376664.796351555,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.069301529089063,
+      "mahalanobis": 30388047.446801722,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06972658889239224,
+      "mahalanobis": 115157205.62967858,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06954081940505642,
+      "mahalanobis": 101273482.72184326,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06920602471214263,
+      "mahalanobis": 7671458.860567903,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06844421668224158,
+      "mahalanobis": 20692387.927735567,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0710750763398968,
+      "mahalanobis": 130932869.97274533,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06732670278754584,
+      "mahalanobis": 136233013.15198153,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06810138401530097,
+      "mahalanobis": 372352684.08787614,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07062360263460028,
+      "mahalanobis": 1322277917.2301583,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07256674628851328,
+      "mahalanobis": 167246291.66867,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": true,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06827327259944053,
+      "mahalanobis": 58091338.57995803,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0702004440977015,
+      "mahalanobis": 1162501303.5077682,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.070704491867782,
+      "mahalanobis": 766379355.7797818,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0701855357819008,
+      "mahalanobis": 664596.1379841154,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06928965693573373,
+      "mahalanobis": 168742635.43972716,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07053829479768786,
+      "mahalanobis": 2084835.4746909763,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07110971298460063,
+      "mahalanobis": 7488749.903957109,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06941522928060581,
+      "mahalanobis": 280898497.8250323,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07107042295936036,
+      "mahalanobis": 500318433.27016824,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06835189176245211,
+      "mahalanobis": 158295539.89274704,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07041261371981834,
+      "mahalanobis": 174249726.86491713,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07156551434905038,
+      "mahalanobis": 309052285.2851007,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06956115779645192,
+      "mahalanobis": 315871889.11954033,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06940488682356469,
+      "mahalanobis": 25982646.820306,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06960584821765016,
+      "mahalanobis": 159446255.40000722,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06989198784487168,
+      "mahalanobis": 2002581.4185421267,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0695381655870993,
+      "mahalanobis": 308215220.1271252,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07028840921458371,
+      "mahalanobis": 6688.510639474372,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06995740797079404,
+      "mahalanobis": 52060.01983184274,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07105390088026046,
+      "mahalanobis": 53919677.516286,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07045841687142922,
+      "mahalanobis": 20624.701365471654,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07127465605834576,
+      "mahalanobis": 8178.943263348562,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06971838413669444,
+      "mahalanobis": 2234395.5264665196,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06871725789552462,
+      "mahalanobis": 332918951.197898,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07021893642278622,
+      "mahalanobis": 2364127.3040803135,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07081909978781357,
+      "mahalanobis": 500098.67108229006,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07014783095522704,
+      "mahalanobis": 61387078.025196604,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07011793582375479,
+      "mahalanobis": 55228034.513820976,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0693467033132985,
+      "mahalanobis": 617327550.8210226,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06865545965777524,
+      "mahalanobis": 160954508.1005635,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06913973805692976,
+      "mahalanobis": 6813732.963275296,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0703337155271257,
+      "mahalanobis": 43002041.30505876,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07053998016767331,
+      "mahalanobis": 42147979.350872606,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06853863373446914,
+      "mahalanobis": 5428656.96572218,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06874763239639367,
+      "mahalanobis": 29576127.282614686,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07074061274472976,
+      "mahalanobis": 185637034.85144922,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07054716186119304,
+      "mahalanobis": 7354126.0624998445,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06972499208013395,
+      "mahalanobis": 18804485.38896657,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06724225799682225,
+      "mahalanobis": 1051753.745960466,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07035010120698704,
+      "mahalanobis": 157376447.42247888,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07028009857546433,
+      "mahalanobis": 732604600.5547181,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06939101838861987,
+      "mahalanobis": 95508527.51664868,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06928420326166865,
+      "mahalanobis": 81623386.76416285,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07134200170574417,
+      "mahalanobis": 292714349.22108066,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06984721390053925,
+      "mahalanobis": 59278128.41841444,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06894991630095462,
+      "mahalanobis": 14227509.575867593,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06825389667974328,
+      "mahalanobis": 34007396.886500925,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07028758799109561,
+      "mahalanobis": 59475085.4292865,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06982832553450792,
+      "mahalanobis": 39259661.463608764,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06998419031845216,
+      "mahalanobis": 46198806.8012357,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07214543269230769,
+      "mahalanobis": 78890695.97332317,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07116323657170247,
+      "mahalanobis": 432915359.08006305,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06920655006703726,
+      "mahalanobis": 107293.22526426998,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06948204295253564,
+      "mahalanobis": 46378596.32368488,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06935946965711108,
+      "mahalanobis": 19352272.137615666,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07025810641414829,
+      "mahalanobis": 1080965267.0433311,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06856020546910409,
+      "mahalanobis": 4645.772061746493,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06917537886776536,
+      "mahalanobis": 16531329.80124426,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07073075420085971,
+      "mahalanobis": 74608086.17775914,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07047684782282508,
+      "mahalanobis": 181347572.53418875,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07019023662845868,
+      "mahalanobis": 79147709.18505183,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.069997147875167,
+      "mahalanobis": 31022097.782911673,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06995847761238776,
+      "mahalanobis": 152583226.5131494,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0703712618087731,
+      "mahalanobis": 101897772.16618292,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0706552020118361,
+      "mahalanobis": 852552505.9271417,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06742876076872101,
+      "mahalanobis": 431135644.57441133,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07023962506614256,
+      "mahalanobis": 20840755.0223557,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07158664920283636,
+      "mahalanobis": 69642979.15985781,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.0705372981749301,
+      "mahalanobis": 78655018.06129038,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07030921013054202,
+      "mahalanobis": 8668.249058756988,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07082767978290366,
+      "mahalanobis": 1281472608.245026,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07053435574503984,
+      "mahalanobis": 143010463.75464532,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07054790401154748,
+      "mahalanobis": 407448479.5093483,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07028426885087931,
+      "mahalanobis": 298551953.4112122,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.07018889490465019,
+      "mahalanobis": 120677091.99652526,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06727264477684175,
+      "mahalanobis": 85787483.34437218,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06915528945737137,
+      "mahalanobis": 864763294.3195649,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06909719612117568,
+      "mahalanobis": 175507701.5663809,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06924267235551282,
+      "mahalanobis": 102657505.29187438,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06902878455198966,
+      "mahalanobis": 187860895.03657895,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    },
+    {
+      "condition": "z_bias",
+      "aggregate": 0.06875922967963594,
+      "mahalanobis": 2242155690.4781437,
+      "monitor_label": "VIOLATION",
+      "agg_alarm_calibrated": false,
+      "mon_violation": true
+    }
+  ]
+}

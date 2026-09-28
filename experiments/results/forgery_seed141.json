@@ -1,0 +1,131 @@
+{
+  "elapsed_s": 0.14441539299991746,
+  "attack": "forgery",
+  "attack_title": "Forgery",
+  "mechanism": "Bob replaces Alice's untested key with a guess and forwards it to Charlie.",
+  "n_pulses": 40000,
+  "length_km": 0.0,
+  "force_click": true,
+  "click_probability": 1.0,
+  "message": 0,
+  "pairs_consumed": 80000,
+  "n_dropped_match": 231,
+  "bob": {
+    "e_cu": 0.12325191124370688,
+    "n_cu": 5363,
+    "p_c": 0.19150594684301844,
+    "e_ct": 0.13004882379050156,
+    "threshold": 0.22,
+    "accepted": true,
+    "early_reject": false
+  },
+  "charlie": {
+    "e_cu": 0.5158942933741861,
+    "n_cu": 5222,
+    "p_c": 0.18861424727803064,
+    "e_ct": 0.12461605967529618,
+    "threshold": 0.32,
+    "accepted": false,
+    "early_reject": true
+  },
+  "forwarded": true,
+  "signature_accepted": false,
+  "bob_axis": {
+    "e": [
+      0.0838785046728972,
+      0.07419135942094549,
+      0.060503059143439834
+    ],
+    "p": [
+      0.025407956945744062,
+      0.03509510219769578,
+      0.04878340247520142
+    ],
+    "n": [
+      4280,
+      4421,
+      4413
+    ],
+    "aggregate": 0.07274668293426872
+  },
+  "charlie_axis": {
+    "e": [
+      0.07789001122334456,
+      0.06630581867388363,
+      0.05757643383173399
+    ],
+    "p": [
+      0.022996120641136535,
+      0.034580313190597456,
+      0.04330969803274709
+    ],
+    "n": [
+      4455,
+      4434,
+      4481
+    ],
+    "aggregate": 0.06724008975317876
+  },
+  "monitor_bob": {
+    "label": "CONSISTENT",
+    "mahalanobis": 0.7258052843274545,
+    "threshold": 9.482986095398662,
+    "aggregate_alarm": false
+  },
+  "monitor_charlie": {
+    "label": "CONSISTENT",
+    "mahalanobis": 1.3295166846902884,
+    "threshold": 9.482986095398662,
+    "aggregate_alarm": false
+  },
+  "security": {
+    "e_b": 0.12461605967529618,
+    "e_p": 0.2786219006684503,
+    "e_bf": 0.020894477471037287,
+    "t_a": 0.22,
+    "t_v": 0.32,
+    "eps_for": 1.0,
+    "eps_rep": 0.36277615530428414,
+    "eps_rob": 5.594876147548666e-31,
+    "eps_tot": 1.3627761560042841,
+    "l_min": 632162.7749663092,
+    "n_cu_for": null,
+    "phase_error_model": "yin2016",
+    "notes": [
+      "e_p intercept from Yin et al. PRA 93, 032316 (2016), the source Weng cites. Weng's printed (4\u2212\u221a2)/4 intercept is available as phase_error_model='weng_printed'.",
+      "L_min is max of derived budgets (forgery closed-form; repudiation numerical)."
+    ]
+  },
+  "contract": {
+    "label": "ADMIT",
+    "reason": "Monitor CONSISTENT and remaining material covers another signature of this size. Weng \u03b5_for is not advertised at this noise (E_BF does not sit above T_v); switch operating_point to 'weng' for that budget.",
+    "remaining": 49920000,
+    "l_min": 632162.7749663092
+  },
+  "credential_ok": true,
+  "credential_reason": "ok",
+  "replay_caught": false,
+  "layers": {
+    "qds": "REJECT",
+    "monitor": "CONSISTENT",
+    "contract": "ADMIT"
+  },
+  "notes": [
+    "e_p intercept from Yin et al. PRA 93, 032316 (2016), the source Weng cites. Weng's printed (4\u2212\u221a2)/4 intercept is available as phase_error_model='weng_printed'.",
+    "L_min is max of derived budgets (forgery closed-form; repudiation numerical).",
+    "Three decision layers kept separate."
+  ],
+  "centrepiece": {
+    "aggregate": 0.06724008975317876,
+    "breakdown": [
+      0.07789001122334456,
+      0.06630581867388363,
+      0.05757643383173399
+    ],
+    "protocol": "REJECT",
+    "qmeter": "CONSISTENT",
+    "contract": "ADMIT"
+  },
+  "condition": "forgery",
+  "seed": 141
+}

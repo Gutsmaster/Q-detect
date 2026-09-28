@@ -1,0 +1,142 @@
+[
+  {
+    "condition": "honest_nominal",
+    "file": "honest_nominal_seed141.json",
+    "aggregate": 0.06883779755183161,
+    "breakdown": [
+      0.07782793051566134,
+      0.07092357257920172,
+      0.057824358511022765
+    ],
+    "protocol": "ACCEPT",
+    "qmeter": "CONSISTENT",
+    "contract": "ADMIT",
+    "elapsed_s": 0.8397746910000023
+  },
+  {
+    "condition": "honest_drift",
+    "file": "honest_drift_seed141.json",
+    "aggregate": 0.06873240284866826,
+    "breakdown": [
+      0.07463639265034423,
+      0.07168426704850546,
+      0.05990242139501265
+    ],
+    "protocol": "ACCEPT",
+    "qmeter": "CONSISTENT",
+    "contract": "ADMIT",
+    "elapsed_s": 0.7213179160000891
+  },
+  {
+    "condition": "adversarial",
+    "file": "adversarial_seed141.json",
+    "aggregate": 0.06960567324630743,
+    "breakdown": [
+      0.10454566178817307,
+      0.10425988902810095,
+      0.0
+    ],
+    "protocol": "ACCEPT",
+    "qmeter": "VIOLATION",
+    "contract": "DEFER",
+    "elapsed_s": 0.7273673529998632
+  },
+  {
+    "condition": "severe_honest_degradation",
+    "file": "severe_honest_degradation_seed141.json",
+    "aggregate": 0.11855922315480447,
+    "breakdown": [
+      0.13361098604232327,
+      0.12202852614896989,
+      0.09998870184159982
+    ],
+    "protocol": "ACCEPT",
+    "qmeter": "CONSISTENT",
+    "contract": "DEFER",
+    "elapsed_s": 0.24298309999994672
+  },
+  {
+    "condition": "severe_manipulation",
+    "file": "severe_manipulation_seed141.json",
+    "aggregate": 0.07196356656253529,
+    "breakdown": [
+      0.10738406123367852,
+      0.10844464568711795,
+      0.0
+    ],
+    "protocol": "ACCEPT",
+    "qmeter": "VIOLATION",
+    "contract": "DEFER",
+    "elapsed_s": 0.15007789299988872
+  },
+  {
+    "condition": "nonunital",
+    "file": "nonunital_seed141.json",
+    "aggregate": 0.041596339222084694,
+    "breakdown": [
+      0.028594122319301033,
+      0.03306804169936106,
+      0.06295508009409656
+    ],
+    "protocol": "ACCEPT",
+    "qmeter": "VIOLATION",
+    "contract": "DEFER",
+    "elapsed_s": 0.14405871700000716
+  },
+  {
+    "condition": "forgery",
+    "file": "forgery_seed141.json",
+    "aggregate": 0.06724008975317876,
+    "breakdown": [
+      0.07789001122334456,
+      0.06630581867388363,
+      0.05757643383173399
+    ],
+    "protocol": "REJECT",
+    "qmeter": "CONSISTENT",
+    "contract": "ADMIT",
+    "elapsed_s": 0.14441539299991746
+  },
+  {
+    "condition": "correction_bits",
+    "file": "correction_bits_seed141.json",
+    "aggregate": 0.6490136570561457,
+    "breakdown": [
+      0.6410020684900023,
+      0.6427428571428572,
+      0.6629995509654243
+    ],
+    "protocol": "REJECT",
+    "qmeter": "VIOLATION",
+    "contract": "DEFER",
+    "elapsed_s": 0.058689678000064305
+  },
+  {
+    "condition": "live_honest",
+    "file": "live_honest_seed141.json",
+    "aggregate": 0.06312038686688724,
+    "breakdown": [
+      0.06791044776119402,
+      0.06967840735068913,
+      0.05144193296960249
+    ],
+    "protocol": "ACCEPT",
+    "qmeter": "CONSISTENT",
+    "contract": "ADMIT",
+    "elapsed_s": 0.11037826999995559
+  },
+  {
+    "condition": "live_adversarial",
+    "file": "live_adversarial_seed141.json",
+    "aggregate": 0.06795622295749555,
+    "breakdown": [
+      0.10298507462686567,
+      0.09877488514548238,
+      0.0
+    ],
+    "protocol": "ACCEPT",
+    "qmeter": "VIOLATION",
+    "contract": "DEFER",
+    "elapsed_s": 0.01922687599994788
+  }
+]
