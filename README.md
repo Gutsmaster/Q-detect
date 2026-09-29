@@ -6,6 +6,8 @@ It is software on a laptop, not lab hardware. No machine-learning libraries.
 
 Run every command from **this folder** (the one that contains `qmeter/` and `dashboard/`). It does not depend on a particular home directory or Anaconda path.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Gutsmaster/q-meter)
+
 ---
 
 ## What the code does

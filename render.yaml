@@ -2,6 +2,7 @@ services:
   - type: web
     name: q-meter
     runtime: python
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn dashboard.app:app
     envVars:
