@@ -119,8 +119,9 @@ def experiment(name: str):
 
 
 def main() -> None:
-    host = os.environ.get("QMETER_HOST", "127.0.0.1")
-    port = int(os.environ.get("QMETER_PORT", "5055"))
+    port = int(os.environ.get("PORT", os.environ.get("QMETER_PORT", "5055")))
+    default_host = "0.0.0.0" if "PORT" in os.environ else "127.0.0.1"
+    host = os.environ.get("QMETER_HOST", default_host)
     print(f"Q-METER dashboard  http://{host}:{port}")
     print("Stop: press Ctrl+C in this terminal.")
     app.run(host=host, port=port, debug=False, threaded=True)
