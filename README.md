@@ -4,9 +4,7 @@
 
 **Live prototype:** https://q-detect.onrender.com/
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Gutsmaster/q-detect)
-
-| | |
+| Field | Details |
 |---|---|
 | Problem statement | SIH26141: Quantum-Inspired Cyber Threat Detection for Digital Signature Security |
 | Theme / category | Blockchain and Security / Software |
@@ -28,7 +26,7 @@ It takes a peer-reviewed signature protocol (Weng et al., 2021) as its core and 
 
 ### The core idea
 
-An honest, slightly noisy fibre and an attacker who biases a single axis can both produce the **same 7% total error rate**. A scalar check (the standard QBER test) cannot tell them apart. Q-DETECT can, because the *distribution* of errors across the three axes is different.
+An honest, slightly noisy fibre and an attacker who biases a single axis can both produce the **same ~7% total error rate**. A scalar check (the standard QBER test) cannot tell them apart. Q-DETECT can, because the *distribution* of errors across the three axes is different.
 
 | Detector | False alarm rate | Detection rate |
 |---|---:|---:|
@@ -58,16 +56,16 @@ The two Q-DETECT layers sit **beside** this verdict and never override it.
 
 ```mermaid
 graph TD
-    A[1. Teleportation-based delivery] --> B[2. Projective Pauli measurements X / Y / Z]
-    B --> C[3. QDS protocol execution + post-matching]
-    C --> D[Path A: aggregate mismatch]
-    D --> E[ACCEPT / REJECT against T_a, T_v]
-    C --> F[Path B: basis-resolved inversion p_X, p_Y, p_Z in O N]
-    F --> G[Mahalanobis distance vs calibrated honest fibre]
-    G --> H[CONSISTENT / VIOLATION]
-    E --> I[Contract engine: epsilon to L_min to unused key]
+    A["Teleportation-based delivery"] --> B["Projective Pauli measurements (X, Y, Z)"]
+    B --> C["QDS protocol execution and post-matching"]
+    C --> D["Path A: aggregate mismatch"]
+    D --> E["ACCEPT or REJECT against Ta and Tv"]
+    C --> F["Path B: basis-resolved inversion of pX, pY, pZ"]
+    F --> G["Mahalanobis distance vs calibrated honest fibre"]
+    G --> H["CONSISTENT or VIOLATION"]
+    E --> I["Contract engine: epsilon to Lmin to unused key"]
     H --> I
-    I --> J[ADMIT / DEFER the next signature]
+    I --> J["ADMIT or DEFER the next signature"]
 ```
 
 - **Path A (cryptographic verification):** the aggregate error rate is checked against Weng's thresholds `T_a` and `T_v`, giving ACCEPT or REJECT. It is blind to which axis the errors are on.
@@ -88,15 +86,19 @@ Three questions, three answers. Do not mix them.
 
 Q-DETECT never changes ACCEPT/REJECT. A row can be **ACCEPT + VIOLATION + DEFER**: this signature was valid, but do not use the link for the next one.
 
+The **centrepiece table** adds one row for every run, newest on top, so you can run several attacks and compare them side by side. Rows with a similar total error but a different axis breakdown show why a scalar check is not enough.
+
 ### Typical results
 
 | Situation | Total error | Axis errors (e_X / e_Y / e_Z) | Protocol | Q-DETECT | Contract |
 |---|---|---|---|---|---|
 | Honest fibre | ~7% | ~7.8 / 7.2 / 6.0 (naturally a bit lopsided) | ACCEPT | CONSISTENT | ADMIT |
 | Honest drift | ~7% | still the honest family | ACCEPT | CONSISTENT | ADMIT |
-| Attacker biasing one axis | ~7% (same total) | e.g. 10.5 / 10.5 / 0 | ACCEPT | VIOLATION | DEFER |
+| Attacker biasing one axis (X, Y or Z) | ~7% (same total) | e.g. 10.5 / 10.5 / 0 | ACCEPT | VIOLATION | DEFER |
 | Much noisier fibre, still honest-shaped | ~12% | compatible shape | ACCEPT | CONSISTENT | DEFER |
 | Forgery (fake key string) | honest-looking channel | not applicable | REJECT | often CONSISTENT | ADMIT (the link is fine) |
+
+Values in this table are for large runs (N = 200,000). The dashboard's default is N = 12,000, so its numbers vary around these (for example, an honest total error of about 6.3% instead of 6.9%). Set "Pulses per recipient N" to 200000 under *Advanced settings* to match.
 
 The protocol stays at ACCEPT on the biased-axis attack because it only sees the total error, which is still under the line. That gap is what Q-DETECT closes.
 
@@ -106,7 +108,7 @@ Other numbers on the page:
 - **Pair click:** 100% at 0 km (lab mode). At 10 km both photons of a Bell pair survive about 60% of the time, so there are fewer samples.
 - **Mahalanobis D²:** distance of the recovered error shape from the calibrated honest family. Above the 99% threshold means VIOLATION.
 
-The dropdown has two operating points: **Detector demo** (7% anisotropic fibre, the table above) and **Weng** (a much quieter channel, e_d = 0.1%, where Weng's published forgery bound is the relevant budget; at 7% noise that bound is deliberately not shown).
+The *Advanced settings* dropdown has two operating points: **Detector demo** (7% anisotropic fibre, the table above) and **Weng** (a much quieter channel, e_d = 0.1%, where Weng's published forgery bound is the relevant budget; at 7% noise that bound is deliberately not shown).
 
 ---
 
@@ -114,14 +116,15 @@ The dropdown has two operating points: **Detector demo** (7% anisotropic fibre, 
 
 | Threat | How the attack works | How Q-DETECT stops it |
 |---|---|---|
-| Axis-biased channel | Single-axis Pauli error tuned to the honest ~7% aggregate, invisible to a scalar check | Basis-resolved Mahalanobis test → VIOLATION; contract DEFERs |
+| Axis-biased channel (X, Y, Z) | Single-axis Pauli error tuned to the honest ~7% aggregate, invisible to a scalar check | Basis-resolved Mahalanobis test → VIOLATION; contract DEFERs |
 | Correction-bit tampering | Flips the two classical teleportation bits so the recipient applies the wrong Pauli | Authenticated bits (Wegman–Carter MAC); mismatch jumps to ~65% → REJECT |
 | Forgery | Bob replaces Alice's untested key with a guess and forwards it | Dual thresholds `T_a` / `T_v`: the guessed key fails Charlie's check → REJECT |
 | Replay | Reuses a consumed one-time key | One-time-key tracking |
 | Repudiation | Alice gives Bob and Charlie different key material, then denies signing | Post-matching (Lu et al.) aligns Charlie's sequence to Bob's |
 | Impersonation | A party who is not Alice offers a signature | Credential chain bound to key distribution |
+| Unauthorized verification | A verifier that was never issued key material | Credential check → REJECT |
 
-The simulator also includes unauthorized-verifier and "invited but greedy" verifier scenarios. All attack names accepted by the CLI and dashboard are defined in [`qdetect/attacks.py`](qdetect/attacks.py).
+The dashboard offers 13 scenarios in total: Honest, Honest drift, Axis-biased X / Y / Z, Correction-bit tampering, Forgery, Replay, Alice repudiation, Unauthorized verification, Impersonation, Non-unital relaxation, and Shape-preserving magnitude scale. The simulator also defines an "invited but greedy" verifier scenario, available through the CLI and API. All attack definitions are in [`qdetect/attacks.py`](qdetect/attacks.py).
 
 ---
 
@@ -156,11 +159,13 @@ Closing the browser tab does not stop the server. Press **Ctrl+C** in the termin
 
 **Using the dashboard:**
 1. Leave **Attack** on *Honest* for a first run, or pick an attack (Z-bias, forgery, replay, ...).
-2. Optionally set the pulse count N, fibre length in km, seed and intensity.
-3. Click the teal **Run live pipeline** button (the pipeline chips in the middle are labels, not buttons).
-4. Wait for *Finished* under the button. The three tiles at the top update.
+2. Optionally open *Advanced settings* to set the pulse count N, fibre length in km, seed and intensity.
+3. Click the blue **Run live pipeline** button.
+4. Wait for *Finished* under the button. The three tiles at the top update, and a new row appears in the centrepiece table.
 
-Pre-computed evidence (seed 141) is in the **Seeded experiments** list on the right.
+Pre-computed evidence (seed 141) is in the **Seeded experiments** list inside *Show full technical detail*.
+
+> **Tip: key reuse looks like a replay.** The protocol tracks one-time keys. Running the same attack twice with the same seed reuses the same key, so the second run is correctly REJECTED as a replay (this can make an *Honest* run look rejected). The key pool is also shared by everyone using the same server. Click **Reset key pool / credentials** (in *Advanced settings*) to start clean, or change the seed between runs.
 
 **Command line, no browser:**
 
@@ -199,6 +204,7 @@ This project is deliberately explicit about what it does **not** claim.
 - **Declared assumption.** Replacing Weng's direct transmission with teleportation plus the public Pauli correction is assumed to be equivalent for the security layer. This is not a published theorem, and Q-DETECT's domain is Pauli-twirled effective channels.
 - **Not information-theoretic.** Weng's protocol is information-theoretically secure under its model; Q-DETECT's detection layer is a statistical assurance layer, not a security proof.
 - **One documented deviation from the paper.** The code uses the phase-error formula from Yin et al. (2016), the source Weng cites, instead of Weng's printed intercept `(4−√2)/4`, which makes the phase error exceed 1/2 and collapses the forgery bound. The original can be selected with `phase_error_model='weng_printed'` (see `qdetect/finite_size.py`).
+- **Credential limits.** The credential check catches never-invited verifiers (and a verifier that exceeds its quota). An invited verifier whose credential is stolen and used by someone else is currently not covered.
 - **Not included:** entanglement or Bell-inequality verification, detector-hardware timing models, and adaptive basis-reweighting feedback.
 - **Simulation, not hardware.** This is software on a laptop. It is aimed at closed-group, high-assurance networks (defence command and control, inter-bank settlement, power grid operations), not open-internet PKI.
 - **Benchmark scope.** The 150 + 150 detection comparison uses honest runs versus the Z-bias attack at a matched 7% aggregate error.
