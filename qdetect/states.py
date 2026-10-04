@@ -15,7 +15,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from qmeter.constants import I_PAULI, X, Y, Z, X_PAULI, Y_PAULI, Z_PAULI
+from qdetect.constants import I_PAULI, X, Y, Z, X_PAULI, Y_PAULI, Z_PAULI
 
 # Map Pauli index {I,X,Y,Z} = {0,1,2,3} onto axis {X,Y,Z} = {0,1,2} or None
 _PAULI_TO_AXIS = {I_PAULI: None, X_PAULI: X, Y_PAULI: Y, Z_PAULI: Z}

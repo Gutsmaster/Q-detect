@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from qmeter.channel import PauliChannel, honest_channel, mix_toward_single_axis, scale_magnitude, single_axis
+from qdetect.channel import PauliChannel, honest_channel, mix_toward_single_axis, scale_magnitude, single_axis
 
 
 @dataclass
@@ -37,7 +37,7 @@ ATTACKS: dict[str, AttackSpec] = {
     "shape_preserving": AttackSpec(
         "shape_preserving",
         "Shape-preserving magnitude scale",
-        "Honest direction, larger magnitude. Aggregate detector can beat Q-METER here.",
+        "Honest direction, larger magnitude. Aggregate detector can beat Q-DETECT here.",
         "distribution",
     ),
     "nonunital": AttackSpec(

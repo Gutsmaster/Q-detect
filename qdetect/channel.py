@@ -12,8 +12,8 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from qmeter.constants import HONEST_P, I_PAULI, X_PAULI, Y_PAULI, Z_PAULI
-from qmeter.states import apply_pauli, bloch_from_eigenstate, measure_from_bloch
+from qdetect.constants import HONEST_P, I_PAULI, X_PAULI, Y_PAULI, Z_PAULI
+from qdetect.states import apply_pauli, bloch_from_eigenstate, measure_from_bloch
 
 
 @dataclass(frozen=True)

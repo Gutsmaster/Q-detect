@@ -16,7 +16,7 @@ from dataclasses import dataclass
 import numpy as np
 from scipy.optimize import brentq
 
-from qmeter.constants import (
+from qdetect.constants import (
     EP_INTERCEPT_WENG_PRINTED,
     EP_INTERCEPT_YIN2016,
     EP_SLOPE_SIX_STATE,
@@ -321,7 +321,7 @@ def choose_thresholds(e_honest: float, e_bf: float, operating_point: str = "dete
     """Pick T_a < T_v. Signature structure requires the gap; the numbers depend
     on the operating point (see constants.TA_DEMO / TA_WENG).
     """
-    from qmeter.constants import TA_DEMO, TA_WENG, TV_DEMO, TV_WENG
+    from qdetect.constants import TA_DEMO, TA_WENG, TV_DEMO, TV_WENG
 
     if operating_point == "weng":
         return TA_WENG, TV_WENG

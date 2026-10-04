@@ -1,4 +1,4 @@
-"""Baseline scalar detector and Q-METER basis-resolved monitor.
+"""Baseline scalar detector and Q-DETECT basis-resolved monitor.
 
 Detection is decoupled from accept/reject. Output is CONSISTENT / VIOLATION
 (certifiability), never an override of Weng's T_a / T_v.
@@ -13,9 +13,9 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from qmeter.channel import recovered_pauli_rates
-from qmeter.constants import CALIBRATION_WOBBLE, EPS_PE_DEFAULT, HONEST_P
-from qmeter.finite_size import abruzzo_upper
+from qdetect.channel import recovered_pauli_rates
+from qdetect.constants import CALIBRATION_WOBBLE, EPS_PE_DEFAULT, HONEST_P
+from qdetect.finite_size import abruzzo_upper
 
 
 @dataclass
@@ -107,7 +107,7 @@ def calibrate_honest_family(
     """Calibrate on *shape* (normalized p), not magnitude.
 
     Magnitude is a contract-engine question (DEFER if the security margin is gone).
-    Shape is the Q-METER question (VIOLATION if the axis pattern leaves the family).
+    Shape is the Q-DETECT question (VIOLATION if the axis pattern leaves the family).
     """
     p0 = np.array(honest_p, dtype=np.float64)
     samples = np.empty((n_ensemble, 3), dtype=np.float64)
@@ -138,7 +138,7 @@ def get_family(seed: int = 141, n_ensemble: int = 4000, n_per_axis: int = 4000) 
 
 #: Below this many matching-basis samples on the *smallest* axis, the shape
 #: estimate is too noisy for any fixed calibration to judge honestly. The
-#: monitor abstains rather than guess. See ``qmeter_verdict`` docstring.
+#: monitor abstains rather than guess. See ``qdetect_verdict`` docstring.
 MIN_SAMPLES_PER_AXIS = 500
 
 #: Calibration is looked up by n_per_axis in discrete steps rather than by
@@ -181,7 +181,7 @@ class MonitorVerdict:
     n_per_axis_calibrated: int
 
 
-def qmeter_verdict(stats: AxisStats, family: CalibratedFamily | None = None, aggregate_threshold: float = 0.10) -> MonitorVerdict:
+def qdetect_verdict(stats: AxisStats, family: CalibratedFamily | None = None, aggregate_threshold: float = 0.10) -> MonitorVerdict:
     """Certifiability verdict: CONSISTENT / VIOLATION / INSUFFICIENT_DATA.
 
     ``family`` is deprecated: passing one explicitly bypasses the automatic

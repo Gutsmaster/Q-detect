@@ -10,15 +10,15 @@ from time import perf_counter
 
 import numpy as np
 
-from qmeter.attacks import ATTACKS, channels_for
-from qmeter.constants import EPS_TOT_TARGET
-from qmeter.contract import ContractDecision, KeyPool, decide
-from qmeter.credentials import CredentialBook
-from qmeter.detector import MonitorVerdict, qmeter_verdict
-from qmeter.finite_size import SecurityReport, assemble, choose_thresholds, e_bf_star
-from qmeter.mac import HMACAuth, WegmanCarter
-from qmeter.protocol import SignatureOutcome, run_signature
-from qmeter.teleport import pair_click_probability
+from qdetect.attacks import ATTACKS, channels_for
+from qdetect.constants import EPS_TOT_TARGET
+from qdetect.contract import ContractDecision, KeyPool, decide
+from qdetect.credentials import CredentialBook
+from qdetect.detector import MonitorVerdict, qdetect_verdict
+from qdetect.finite_size import SecurityReport, assemble, choose_thresholds, e_bf_star
+from qdetect.mac import HMACAuth, WegmanCarter
+from qdetect.protocol import SignatureOutcome, run_signature
+from qdetect.teleport import pair_click_probability
 
 
 @dataclass
@@ -145,7 +145,7 @@ class PipelineResult:
                 "aggregate": cs.aggregate,
                 "breakdown": [cs.e_x, cs.e_y, cs.e_z],
                 "protocol": "ACCEPT" if o.accepted else "REJECT",
-                "qmeter": self.charlie_monitor.label,
+                "qdetect": self.charlie_monitor.label,
                 "contract": self.contract.label,
             },
         }
@@ -221,13 +221,13 @@ def run_pipeline(cfg: SimulationConfig, pool: KeyPool | None = None) -> Pipeline
         key_id=cfg.key_id,
     )
 
-    # No fixed `family` passed here: qmeter_verdict picks a calibration
+    # No fixed `family` passed here: qdetect_verdict picks a calibration
     # sized to each party's own observed matching-basis count (see its
     # docstring). Bob and Charlie generally see different counts, so each
     # gets its own matched calibration rather than sharing one built for
     # a hardcoded default.
-    bob_mon = qmeter_verdict(outcome.bob_stats)
-    charlie_mon = qmeter_verdict(outcome.charlie_stats)
+    bob_mon = qdetect_verdict(outcome.bob_stats)
+    charlie_mon = qdetect_verdict(outcome.charlie_stats)
 
     e_b = outcome.charlie.e_ct if outcome.charlie.n_ct else outcome.charlie.e_cu
     if e_b != e_b:

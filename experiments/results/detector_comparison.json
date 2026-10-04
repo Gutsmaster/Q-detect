@@ -4,11 +4,11 @@
   "aggregate_threshold_used": 0.07229404080897257,
   "false_alarm_rate": {
     "aggregate": 0.006666666666666667,
-    "qmeter": 0.0
+    "qdetect": 0.0
   },
   "detection_rate": {
     "aggregate": 0.02,
-    "qmeter": 1.0
+    "qdetect": 1.0
   },
   "rows": [
     {

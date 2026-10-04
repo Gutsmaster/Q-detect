@@ -9,7 +9,7 @@
       0.057824358511022765
     ],
     "protocol": "ACCEPT",
-    "qmeter": "CONSISTENT",
+    "qdetect": "CONSISTENT",
     "contract": "ADMIT",
     "elapsed_s": 0.8397746910000023
   },
@@ -23,7 +23,7 @@
       0.05990242139501265
     ],
     "protocol": "ACCEPT",
-    "qmeter": "CONSISTENT",
+    "qdetect": "CONSISTENT",
     "contract": "ADMIT",
     "elapsed_s": 0.7213179160000891
   },
@@ -37,7 +37,7 @@
       0.0
     ],
     "protocol": "ACCEPT",
-    "qmeter": "VIOLATION",
+    "qdetect": "VIOLATION",
     "contract": "DEFER",
     "elapsed_s": 0.7273673529998632
   },
@@ -51,7 +51,7 @@
       0.09998870184159982
     ],
     "protocol": "ACCEPT",
-    "qmeter": "CONSISTENT",
+    "qdetect": "CONSISTENT",
     "contract": "DEFER",
     "elapsed_s": 0.24298309999994672
   },
@@ -65,7 +65,7 @@
       0.0
     ],
     "protocol": "ACCEPT",
-    "qmeter": "VIOLATION",
+    "qdetect": "VIOLATION",
     "contract": "DEFER",
     "elapsed_s": 0.15007789299988872
   },
@@ -79,7 +79,7 @@
       0.06295508009409656
     ],
     "protocol": "ACCEPT",
-    "qmeter": "VIOLATION",
+    "qdetect": "VIOLATION",
     "contract": "DEFER",
     "elapsed_s": 0.14405871700000716
   },
@@ -93,7 +93,7 @@
       0.05757643383173399
     ],
     "protocol": "REJECT",
-    "qmeter": "CONSISTENT",
+    "qdetect": "CONSISTENT",
     "contract": "ADMIT",
     "elapsed_s": 0.14441539299991746
   },
@@ -107,7 +107,7 @@
       0.6629995509654243
     ],
     "protocol": "REJECT",
-    "qmeter": "VIOLATION",
+    "qdetect": "VIOLATION",
     "contract": "DEFER",
     "elapsed_s": 0.058689678000064305
   },
@@ -121,7 +121,7 @@
       0.05144193296960249
     ],
     "protocol": "ACCEPT",
-    "qmeter": "CONSISTENT",
+    "qdetect": "CONSISTENT",
     "contract": "ADMIT",
     "elapsed_s": 0.11037826999995559
   },
@@ -135,7 +135,7 @@
       0.0
     ],
     "protocol": "ACCEPT",
-    "qmeter": "VIOLATION",
+    "qdetect": "VIOLATION",
     "contract": "DEFER",
     "elapsed_s": 0.01922687599994788
   }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Q-METER — Weng 2021 QDS + threat monitor</title>
+<title>Q-DETECT — Weng 2021 QDS + threat monitor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -216,7 +216,7 @@
 </head>
 <body>
 <header>
-  <h1>Q-Meter</h1>
+  <h1>Q-Detect</h1>
   <div class="meta">
     SIH 2026 · PS 141<br/>
     <span id="elapsed"></span>
@@ -262,7 +262,7 @@
       </div>
       <div class="status-item">
         <span class="status-dot" id="dot_mon"></span>
-        <span class="status-label">Q-Meter monitor</span>
+        <span class="status-label">Q-Detect monitor</span>
         <span class="status-value" id="l_mon">—</span>
       </div>
       <div class="status-item">
@@ -276,7 +276,7 @@
     <div style="margin-bottom:20px;">
       <div class="section-heading">Centrepiece — same aggregate, different shape</div>
       <table>
-        <thead><tr><th>Channel</th><th>Aggregate</th><th>e<sub>X</sub> / e<sub>Y</sub> / e<sub>Z</sub></th><th>Protocol</th><th>Q-Meter</th></tr></thead>
+        <thead><tr><th>Channel</th><th>Aggregate</th><th>e<sub>X</sub> / e<sub>Y</sub> / e<sub>Z</sub></th><th>Protocol</th><th>Q-Detect</th></tr></thead>
         <tbody id="centre"></tbody>
       </table>
       <p class="notes" style="margin-top:8px;">No scalar threshold can separate two channels whose aggregate statistic is identical. The basis-resolved column is the evidence.</p>
@@ -309,7 +309,7 @@
           <span class="step on">Bob T<sub>a</sub></span>
           <span class="step on">forward classical</span>
           <span class="step on">Charlie T<sub>v</sub></span>
-          <span class="step on">Q-Meter</span>
+          <span class="step on">Q-Detect</span>
           <span class="step on">ADMIT / DEFER</span>
         </div>
         <div class="row">
@@ -450,7 +450,7 @@ function render(d){
     <td>${pct(d.centrepiece.aggregate)}</td>
     <td>${d.centrepiece.breakdown.map(pct).join(" / ")}</td>
     <td class="${cls(d.centrepiece.protocol)}">${d.centrepiece.protocol}</td>
-    <td class="${cls(d.qmeter ? d.centrepiece.qmeter : d.centrepiece.qmeter)}">${d.centrepiece.qmeter}</td>
+    <td class="${cls(d.qdetect ? d.centrepiece.qdetect : d.centrepiece.qdetect)}">${d.centrepiece.qdetect}</td>
   </tr>`;
   // append unique-ish
   const tb = document.getElementById("centre");
@@ -501,7 +501,7 @@ async function loadExps(){
   const el = document.getElementById("exps");
   if(!xs.length){ el.innerHTML = "<p class='notes'>Run <code>python experiments/generate_experiment.py --seed 141</code></p>"; return; }
   el.innerHTML = xs.map(x=>`<button data-c="${x.condition}" style="width:100%;margin:3px 0;text-align:left;background:transparent;border:1px solid var(--border);color:var(--text);padding:7px 10px;border-radius:4px;cursor:pointer;font-family:inherit;font-size:13px;">
-    ${x.condition}<br/><span style="color:var(--muted);font-size:11px">${pct(x.aggregate)} · ${x.qmeter} · ${x.protocol}</span>
+    ${x.condition}<br/><span style="color:var(--muted);font-size:11px">${pct(x.aggregate)} · ${x.qdetect} · ${x.protocol}</span>
   </button>`).join("");
   el.querySelectorAll("button").forEach(b=> b.onclick = async ()=>{
     const d = await (await fetch("/api/experiment/"+b.dataset.c)).json();

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Stop the dashboard started by run_dashboard.sh / python dashboard/app.py
-PORT="${QMETER_PORT:-5055}"
+PORT="${QDETECT_PORT:-5055}"
 cd "$(dirname "$0")"
 
 if command -v lsof >/dev/null 2>&1; then

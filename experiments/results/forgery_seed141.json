@@ -123,7 +123,7 @@
       0.05757643383173399
     ],
     "protocol": "REJECT",
-    "qmeter": "CONSISTENT",
+    "qdetect": "CONSISTENT",
     "contract": "ADMIT"
   },
   "condition": "forgery",

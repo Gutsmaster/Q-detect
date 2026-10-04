@@ -123,7 +123,7 @@
       0.05990242139501265
     ],
     "protocol": "ACCEPT",
-    "qmeter": "CONSISTENT",
+    "qdetect": "CONSISTENT",
     "contract": "ADMIT"
   },
   "condition": "honest_drift",

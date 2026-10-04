@@ -15,7 +15,7 @@ from dataclasses import dataclass, field
 
 import numpy as np
 
-from qmeter.finite_size import SecurityReport, assemble, choose_thresholds, e_bf_star
+from qdetect.finite_size import SecurityReport, assemble, choose_thresholds, e_bf_star
 
 
 @dataclass
@@ -73,7 +73,7 @@ def decide(
         return ContractDecision(
             admit=False,
             label="DEFER",
-            reason="Link is not certifiable (Q-METER VIOLATION). This signature's validity is unchanged; the next one is not admitted.",
+            reason="Link is not certifiable (Q-DETECT VIOLATION). This signature's validity is unchanged; the next one is not admitted.",
             l_min=sec.l_min,
             remaining=pool.remaining,
             eps_requested=eps_requested,

@@ -14,7 +14,7 @@ from __future__ import annotations
 
 import numpy as np
 
-from qmeter.constants import X, Y, Z
+from qdetect.constants import X, Y, Z
 
 # Pair types: (axis0, axis1) with first = bit 0, second = bit 1
 _PAIR_TYPES = ((X, Y), (Y, Z), (Z, X))

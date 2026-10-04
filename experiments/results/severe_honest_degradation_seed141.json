@@ -2,7 +2,7 @@
   "elapsed_s": 0.24298309999994672,
   "attack": "shape_preserving",
   "attack_title": "Shape-preserving magnitude scale",
-  "mechanism": "Honest direction, larger magnitude. Aggregate detector can beat Q-METER here.",
+  "mechanism": "Honest direction, larger magnitude. Aggregate detector can beat Q-DETECT here.",
   "n_pulses": 80000,
   "length_km": 0.0,
   "force_click": true,
@@ -125,7 +125,7 @@
       0.09998870184159982
     ],
     "protocol": "ACCEPT",
-    "qmeter": "CONSISTENT",
+    "qdetect": "CONSISTENT",
     "contract": "DEFER"
   },
   "condition": "severe_honest_degradation",

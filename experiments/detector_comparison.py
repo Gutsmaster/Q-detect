@@ -1,13 +1,13 @@
 """
-Fair comparison of the aggregate detector against Q-METER's basis-resolved
+Fair comparison of the aggregate detector against Q-DETECT's basis-resolved
 monitor, run against the ACTUAL pipeline (teleportation -> SARG04 ->
 Weng protocol -> detector), not a standalone model of it.
 
 Why this script exists
 -----------------------
-qmeter_verdict's Mahalanobis test calibrates itself automatically to the
+qdetect_verdict's Mahalanobis test calibrates itself automatically to the
 observed sample size (see detector.py). The aggregate path has no such
-calibration: qmeter_verdict's `aggregate_alarm` output compares against a
+calibration: qdetect_verdict's `aggregate_alarm` output compares against a
 hardcoded 10% cutoff, which sits well above the honest mean at the demo
 operating point (~7%), so it essentially never fires. That is not a fair
 baseline -- it's an uncalibrated one, and it would make the standard
@@ -46,8 +46,8 @@ import json
 import sys
 from pathlib import Path
 
-from qmeter.contract import KeyPool
-from qmeter.simulator import SimulationConfig, reset_session, run_pipeline
+from qdetect.contract import KeyPool
+from qdetect.simulator import SimulationConfig, reset_session, run_pipeline
 
 RESULTS_DIR = Path(__file__).parent / "results"
 RESULTS_DIR.mkdir(exist_ok=True)
@@ -129,8 +129,8 @@ def phase_test() -> None:
         "n_raw": N_RAW,
         "n_per_condition": N_TEST_PER_CONDITION,
         "aggregate_threshold_used": agg_threshold,
-        "false_alarm_rate": {"aggregate": far_agg, "qmeter": far_mon},
-        "detection_rate": {"aggregate": tpr_agg, "qmeter": tpr_mon},
+        "false_alarm_rate": {"aggregate": far_agg, "qdetect": far_mon},
+        "detection_rate": {"aggregate": tpr_agg, "qdetect": tpr_mon},
         "rows": rows,
     }
     OUT_FILE.write_text(json.dumps(summary, indent=2))
@@ -139,7 +139,7 @@ def phase_test() -> None:
           f"calibrated aggregate threshold={agg_threshold*100:.3f}%\n")
     print(f"{'detector':<12} {'false alarm':>12} {'detection':>12}")
     print(f"{'aggregate':<12} {far_agg:>11.2%} {tpr_agg:>11.2%}")
-    print(f"{'q-meter':<12} {far_mon:>11.2%} {tpr_mon:>11.2%}")
+    print(f"{'q-detect':<12} {far_mon:>11.2%} {tpr_mon:>11.2%}")
     print(f"\nWritten to {OUT_FILE}")
 
 
@@ -184,7 +184,7 @@ def phase_plot() -> None:
                 va="bottom", ha="left", fontsize=9, color="#666b87")
 
     ax.set_xlabel("Aggregate Error Rate (%)")
-    ax.set_ylabel("Q-METER Statistical Distance (Mahalanobis D², log scale)")
+    ax.set_ylabel("Q-DETECT Statistical Distance (Mahalanobis D², log scale)")
     ax.set_title("Same aggregate error rate.\nCompletely different statistical signature.",
                   fontsize=12, fontweight="bold")
     ax.legend(loc="upper right", frameon=False)

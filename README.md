@@ -1,12 +1,12 @@
-# Q-METER
+# Q-DETECT
 
 A **simulator** of a teleportation-based quantum digital signature, plus a web dashboard that runs the pipeline and shows what the detectors decided.
 
 It is software on a laptop, not lab hardware. No machine-learning libraries.
 
-Run every command from **this folder** (the one that contains `qmeter/` and `dashboard/`). It does not depend on a particular home directory or Anaconda path.
+Run every command from **this folder** (the one that contains `qdetect/` and `dashboard/`). It does not depend on a particular home directory or Anaconda path.
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Gutsmaster/q-meter)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Gutsmaster/q-detect)
 
 ---
 
@@ -23,7 +23,7 @@ Alice wants to **sign a message** so Bob and Charlie can be sure it came from he
 
 Two extra layers sit **beside** that verdict, and never override it:
 
-- **Q-METER** looks at the *shape* of errors on the three axes, not just the total error rate. An honest warm fibre and an attacker biasing one axis can produce the same 7% total error. The scalar protocol cannot tell them apart; the shape test can.
+- **Q-DETECT** looks at the *shape* of errors on the three axes, not just the total error rate. An honest warm fibre and an attacker biasing one axis can produce the same 7% total error. The scalar protocol cannot tell them apart; the shape test can.
 - **Contract engine** decides whether there is enough unused key, and whether the link is still trustworthy enough, to sign the **next** message. If not, it defers (fail closed) instead of issuing a weaker signature.
 
 ---
@@ -69,7 +69,7 @@ That address is local to the machine that started the server. Sending someone th
 To use another port:
 
 ```bash
-QMETER_PORT=8080 python dashboard/app.py
+QDETECT_PORT=8080 python dashboard/app.py
 ```
 
 ---
@@ -99,7 +99,7 @@ python experiments/generate_experiment.py --seed 141 --condition all
 Command-line run without the browser:
 
 ```bash
-python -m qmeter --attack z_bias --n 12000 --km 0
+python -m qdetect --attack z_bias --n 12000 --km 0
 ```
 
 ---
@@ -111,10 +111,10 @@ Three questions, three answers. Do not mix them.
 | Tile / column | Question | Words |
 |---|---|---|
 | **Protocol** (QDS verifier) | Is *this* signature valid? | **ACCEPT** — Bob passed \(T_a\) and Charlie passed \(T_v\). **REJECT** — Charlie did not accept. **ABORT (Bob)** — Bob never forwarded. |
-| **Q-METER** | Does the error *shape* still match this fibre’s calibrated honest pattern? | **CONSISTENT** — yes. **VIOLATION** — no. That is “security model mismatch,” not automatically “an eavesdropper.” |
-| **Contract** | May we sign the *next* message? | **ADMIT** — link looks honest enough and key material remains. **DEFER** — stop. Typical reasons: Q-METER violation, fibre too noisy for the security margin, or not enough unused pairs. |
+| **Q-DETECT** | Does the error *shape* still match this fibre’s calibrated honest pattern? | **CONSISTENT** — yes. **VIOLATION** — no. That is “security model mismatch,” not automatically “an eavesdropper.” |
+| **Contract** | May we sign the *next* message? | **ADMIT** — link looks honest enough and key material remains. **DEFER** — stop. Typical reasons: Q-DETECT violation, fibre too noisy for the security margin, or not enough unused pairs. |
 
-Q-METER never changes ACCEPT/REJECT. A row can be **ACCEPT + VIOLATION + DEFER**: *this signature was valid; do not use the link for the next one.*
+Q-DETECT never changes ACCEPT/REJECT. A row can be **ACCEPT + VIOLATION + DEFER**: *this signature was valid; do not use the link for the next one.*
 
 ---
 
@@ -122,7 +122,7 @@ Q-METER never changes ACCEPT/REJECT. A row can be **ACCEPT + VIOLATION + DEFER**
 
 The centrepiece table is the result that matters.
 
-| Situation | Total error | Axis breakdown \(e_X / e_Y / e_Z\) | Protocol | Q-METER | Contract |
+| Situation | Total error | Axis breakdown \(e_X / e_Y / e_Z\) | Protocol | Q-DETECT | Contract |
 |---|---|---|---|---|---|
 | Honest fibre | ~7% | ~7.8 / 7.2 / 6.0 (naturally a bit lopsided) | ACCEPT | CONSISTENT | ADMIT |
 | Honest drift | ~7% | still the honest family | ACCEPT | CONSISTENT | ADMIT |
@@ -130,7 +130,7 @@ The centrepiece table is the result that matters.
 | Fibre much noisier, still honest-shaped | ~12% | compatible shape | ACCEPT | CONSISTENT | DEFER |
 | Forgery (fake key string) | honest-looking channel | — | REJECT | often CONSISTENT | ADMIT (the *link* is fine) |
 
-The protocol column can stay ACCEPT on the biased-axis attack because it only sees one number — the total error — which is still under the line. That is the point of Q-METER.
+The protocol column can stay ACCEPT on the biased-axis attack because it only sees one number — the total error — which is still under the line. That is the point of Q-DETECT.
 
 Other useful numbers on the page:
 
@@ -149,7 +149,7 @@ Two operating points (dropdown):
 ## Folder layout
 
 ```
-qmeter/        physics engine (states, teleportation, SARG04, detector, attacks)
+qdetect/        physics engine (states, teleportation, SARG04, detector, attacks)
 dashboard/     web UI
 experiments/   seeded runs (generate_experiment.py, results/)
 tests/         physics identities

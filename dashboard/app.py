@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Q-METER dashboard. Run from the project root:
+"""Q-DETECT dashboard. Run from the project root:
 
     python dashboard/app.py
 """
@@ -18,8 +18,8 @@ from flask import Flask, jsonify, request, send_from_directory
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from qmeter.attacks import ATTACKS
-from qmeter.simulator import POOL, SimulationConfig, reset_session, run_pipeline
+from qdetect.attacks import ATTACKS
+from qdetect.simulator import POOL, SimulationConfig, reset_session, run_pipeline
 
 STATIC = Path(__file__).resolve().parent / "static"
 RESULTS = ROOT / "experiments" / "results"
@@ -55,9 +55,9 @@ def meta():
             "pool": {"generated": POOL.pairs_generated, "consumed": POOL.pairs_consumed, "remaining": POOL.remaining},
             "assumptions": [
                 "Teleportation ≡ intended six-state qubit after the public Pauli correction is an assumption, not a theorem. No published reduction exists.",
-                "Q-METER domain: Pauli-twirled effective channels. Twirling is an operation, not a free consequence of teleporting.",
+                "Q-DETECT domain: Pauli-twirled effective channels. Twirling is an operation, not a free consequence of teleporting.",
                 "Detection is decoupled from accept/reject. Weng's T_a / T_v own this signature; the monitor owns the next one.",
-                "Q-METER is not information-theoretic security. Weng's protocol is, under its model.",
+                "Q-DETECT is not information-theoretic security. Weng's protocol is, under its model.",
                 "Adaptive eavesdroppers who randomize their basis erase the axis signature. This detector targets channel manipulation.",
             ],
             "citations": {
@@ -119,10 +119,10 @@ def experiment(name: str):
 
 
 def main() -> None:
-    port = int(os.environ.get("PORT", os.environ.get("QMETER_PORT", "5055")))
+    port = int(os.environ.get("PORT", os.environ.get("QDETECT_PORT", "5055")))
     default_host = "0.0.0.0" if "PORT" in os.environ else "127.0.0.1"
-    host = os.environ.get("QMETER_HOST", default_host)
-    print(f"Q-METER dashboard  http://{host}:{port}")
+    host = os.environ.get("QDETECT_HOST", default_host)
+    print(f"Q-DETECT dashboard  http://{host}:{port}")
     print("Stop: press Ctrl+C in this terminal.")
     app.run(host=host, port=port, debug=False, threaded=True)
 

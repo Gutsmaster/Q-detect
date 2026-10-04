@@ -1,15 +1,15 @@
-"""python -m qmeter  →  live pipeline CLI. Dashboard is dashboard/app.py."""
+"""python -m qdetect  →  live pipeline CLI. Dashboard is dashboard/app.py."""
 
 from __future__ import annotations
 
 import argparse
 import json
 
-from qmeter.simulator import SimulationConfig, run_pipeline
+from qdetect.simulator import SimulationConfig, run_pipeline
 
 
 def main() -> None:
-    p = argparse.ArgumentParser(description="Q-METER live pipeline")
+    p = argparse.ArgumentParser(description="Q-DETECT live pipeline")
     p.add_argument("--attack", default="none")
     p.add_argument("--n", type=int, default=12000)
     p.add_argument("--seed", type=int, default=141)

@@ -8,12 +8,12 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from qmeter.contract import KeyPool  # noqa: E402
-from qmeter.simulator import SimulationConfig, run_pipeline  # noqa: E402
+from qdetect.contract import KeyPool  # noqa: E402
+from qdetect.simulator import SimulationConfig, run_pipeline  # noqa: E402
 
 
 def test_honest_signature_accepts():
-    from qmeter.simulator import reset_session
+    from qdetect.simulator import reset_session
 
     reset_session()
     pool = KeyPool(pairs_generated=5_000_000)
@@ -30,7 +30,7 @@ def test_honest_signature_accepts():
 
 
 def test_z_bias_accepts_but_not_certifiable():
-    from qmeter.simulator import reset_session
+    from qdetect.simulator import reset_session
 
     reset_session()
     pool = KeyPool(pairs_generated=5_000_000)
@@ -46,7 +46,7 @@ def test_z_bias_accepts_but_not_certifiable():
 
 
 def test_forgery_charlie_rejects():
-    from qmeter.simulator import reset_session
+    from qdetect.simulator import reset_session
 
     reset_session()
     pool = KeyPool(pairs_generated=5_000_000)
@@ -62,7 +62,7 @@ def test_replay_caught():
     pool = KeyPool(pairs_generated=5_000_000)
     cfg = SimulationConfig(n_pulses=4000, seed=3, attack="none", key_id="same", force_click=True)
     r1 = run_pipeline(cfg, pool=pool)
-    from qmeter import simulator as sim
+    from qdetect import simulator as sim
 
     sim.USED_KEYS.add("same")
     r2 = run_pipeline(

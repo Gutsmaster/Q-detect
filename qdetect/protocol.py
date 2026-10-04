@@ -6,12 +6,12 @@ from dataclasses import dataclass, field
 
 import numpy as np
 
-from qmeter.channel import PauliChannel, apply_amplitude_damping, apply_pauli_channel, honest_channel
-from qmeter.constants import IDEAL_CONCLUSIVE_PROB, PC_ABORT_DEV
-from qmeter.detector import AxisStats, certified_early_reject, matching_basis_errors
-from qmeter.postmatching import post_match
-from qmeter.sarg04 import alice_logic_bits, assign_sets, decode, mismatch_rate
-from qmeter.teleport import teleport_and_measure
+from qdetect.channel import PauliChannel, apply_amplitude_damping, apply_pauli_channel, honest_channel
+from qdetect.constants import IDEAL_CONCLUSIVE_PROB, PC_ABORT_DEV
+from qdetect.detector import AxisStats, certified_early_reject, matching_basis_errors
+from qdetect.postmatching import post_match
+from qdetect.sarg04 import alice_logic_bits, assign_sets, decode, mismatch_rate
+from qdetect.teleport import teleport_and_measure
 
 
 @dataclass

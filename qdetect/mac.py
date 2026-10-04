@@ -16,7 +16,7 @@ import hmac
 import os
 from dataclasses import dataclass, field
 
-from qmeter.constants import WC_TAG_BITS
+from qdetect.constants import WC_TAG_BITS
 
 
 def _gf_mul(a: int, b: int) -> int:

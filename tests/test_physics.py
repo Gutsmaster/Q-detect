@@ -11,19 +11,19 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from qmeter.channel import (  # noqa: E402
+from qdetect.channel import (  # noqa: E402
     PauliChannel,
     apply_pauli_channel,
     recovered_pauli_rates,
     single_axis,
 )
-from qmeter.constants import IDEAL_CONCLUSIVE_PROB  # noqa: E402
-from qmeter.detector import matching_basis_errors  # noqa: E402
-from qmeter.finite_size import binary_entropy, e_bf_star, epsilon_for, n_cu_for_forgery, phase_error  # noqa: E402
-from qmeter.postmatching import post_match, state_id  # noqa: E402
-from qmeter.sarg04 import alice_logic_bits, assign_sets, decode, mismatch_rate  # noqa: E402
-from qmeter.states import apply_pauli, measure_eigenstate  # noqa: E402
-from qmeter.teleport import explicit_teleport_one  # noqa: E402
+from qdetect.constants import IDEAL_CONCLUSIVE_PROB  # noqa: E402
+from qdetect.detector import matching_basis_errors  # noqa: E402
+from qdetect.finite_size import binary_entropy, e_bf_star, epsilon_for, n_cu_for_forgery, phase_error  # noqa: E402
+from qdetect.postmatching import post_match, state_id  # noqa: E402
+from qdetect.sarg04 import alice_logic_bits, assign_sets, decode, mismatch_rate  # noqa: E402
+from qdetect.states import apply_pauli, measure_eigenstate  # noqa: E402
+from qdetect.teleport import explicit_teleport_one  # noqa: E402
 
 
 def test_sarg04_conclusive_rate_ideal():

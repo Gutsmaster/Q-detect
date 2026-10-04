@@ -19,7 +19,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from qmeter.constants import (
+from qdetect.constants import (
     DETECTION_EFFICIENCY,
     DARK_COUNT_PROB,
     FIBER_LOSS_DB_PER_KM,
@@ -28,7 +28,7 @@ from qmeter.constants import (
     Y_PAULI,
     Z_PAULI,
 )
-from qmeter.states import apply_pauli, measure_eigenstate
+from qdetect.states import apply_pauli, measure_eigenstate
 
 # Bell outcome 00,01,10,11 → correction I, X, Z, XZ  (standard Φ⁺, Ψ⁺, Φ⁻, Ψ⁻)
 # We use bits (b1, b2) with correction X^{b1} Z^{b2}.

@@ -98,7 +98,7 @@
   },
   "contract": {
     "label": "DEFER",
-    "reason": "Link is not certifiable (Q-METER VIOLATION). This signature's validity is unchanged; the next one is not admitted.",
+    "reason": "Link is not certifiable (Q-DETECT VIOLATION). This signature's validity is unchanged; the next one is not admitted.",
     "remaining": 49840000,
     "l_min": 112565.72978001632
   },
@@ -124,7 +124,7 @@
       0.06295508009409656
     ],
     "protocol": "ACCEPT",
-    "qmeter": "VIOLATION",
+    "qdetect": "VIOLATION",
     "contract": "DEFER"
   },
   "condition": "nonunital",

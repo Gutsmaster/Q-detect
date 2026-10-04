@@ -17,8 +17,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from qmeter.contract import KeyPool
-from qmeter.simulator import SimulationConfig, reset_session, run_pipeline
+from qdetect.contract import KeyPool
+from qdetect.simulator import SimulationConfig, reset_session, run_pipeline
 
 RESULTS = Path(__file__).resolve().parent / "results"
 
@@ -66,7 +66,7 @@ def main() -> None:
             f"  agg={payload['charlie_axis']['aggregate']:.4f}  "
             f"e={payload['charlie_axis']['e']}  "
             f"qds={payload['layers']['qds']}  "
-            f"qmeter={payload['layers']['monitor']}  "
+            f"qdetect={payload['layers']['monitor']}  "
             f"contract={payload['layers']['contract']}  "
             f"{payload['elapsed_s']:.2f}s"
         )
