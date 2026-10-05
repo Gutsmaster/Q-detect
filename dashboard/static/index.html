@@ -276,7 +276,7 @@
     <div style="margin-bottom:20px;">
       <div class="section-heading">Centrepiece — same aggregate, different shape</div>
       <table>
-        <thead><tr><th>Channel</th><th>Aggregate</th><th>e<sub>X</sub> / e<sub>Y</sub> / e<sub>Z</sub></th><th>Protocol</th><th>Q-Detect</th></tr></thead>
+        <thead><tr><th>Channel</th><th>Aggregate</th><th>e<sub>X</sub> / e<sub>Y</sub> / e<sub>Z</sub></th><th>Protocol</th><th>Q-Detect</th><th>Contract</th></tr></thead>
         <tbody id="centre"></tbody>
       </table>
       <p class="notes" style="margin-top:8px;">No scalar threshold can separate two channels whose aggregate statistic is identical. The basis-resolved column is the evidence.</p>
@@ -451,6 +451,7 @@ function render(d){
     <td>${d.centrepiece.breakdown.map(pct).join(" / ")}</td>
     <td class="${cls(d.centrepiece.protocol)}">${d.centrepiece.protocol}</td>
     <td class="${cls(d.qdetect ? d.centrepiece.qdetect : d.centrepiece.qdetect)}">${d.centrepiece.qdetect}</td>
+    <td class="${cls(d.layers.contract)}">${d.layers.contract}</td>
   </tr>`;
   // append unique-ish
   const tb = document.getElementById("centre");
